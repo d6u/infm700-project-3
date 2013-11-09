@@ -5197,6 +5197,7 @@ html, body {
 
 .se-navbar-menus {
   position: absolute;
+  z-index: 1000;
   right: -80%;
   top: 0;
   width: 80%;
@@ -5214,7 +5215,10 @@ html, body {
     line-height: 44px;
     font-size: 18px;
     padding: 0 20px;
-    color: #FFF; }
+    color: #FFF;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
     .se-navbar-menus a:hover {
       text-decoration: none;
       color: #FFF;
@@ -5283,6 +5287,7 @@ html, body {
       top: 100%;
       right: 0 !important;
       height: auto;
+      width: auto;
       -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
       box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); }
       .se-navbar-menu-top .sub-menu .menu-item {
