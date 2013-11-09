@@ -1,0 +1,63 @@
+// --- Container ---
+.se-banner {
+  height: 350px;
+  background-color: $gray1;
+
+  &.se-banner-calendar {
+    height: auto;
+    background-color: transparent;
+  }
+}
+
+
+// --- Homepage ---
+.se-banner.se-banner-homepage {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+// --- Picture ---
+.se-banner.se-banner-picture {
+  height: 500px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.se-banner-p-inner {
+  @extend .container;
+  height: 100%;
+  position: relative;
+}
+
+.se-banner-p-i-caption {
+  @extend .clearfix;
+  position: absolute;
+  bottom: 30px;
+  max-width: 500px;
+}
+
+.se-banner-p-i-c-title {
+  padding: 10px 15px;
+  background: rgba($blueDark, .7);
+  color: #FFF;
+  margin-bottom: 20px;
+  float: left;
+}
+
+.se-banner-p-i-c-intro {
+  @extend .se-banner-p-i-c-title;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+
+// --- Donate ---
+.se-banner.se-banner-donate-page {
+  height: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

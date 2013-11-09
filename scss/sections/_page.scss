@@ -1,0 +1,23 @@
+.se-page-container {
+  @extend .container;
+}
+
+
+// Corporate Partner
+.se-corporate-partner {}
+
+.se-corporate-partner-image {
+  margin-bottom: 20px;
+  text-align: center;
+  img {
+    max-width: 100%;
+  }
+}
+
+.se-corporate-partner-donate-button {
+  margin-bottom: 20px;
+  text-align: center;
+  a {
+    width: 200px;
+  }
+}

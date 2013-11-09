@@ -1,0 +1,49 @@
+.se-calendar-jumbo {
+  @extend .clearfix;
+  $fullWidth: 960px;
+
+  table {
+    width: $fullWidth;
+    margin: 20px auto;
+  }
+
+  thead {
+    th {
+      text-indent: 5px;
+    }
+  }
+
+  tbody {
+    td {
+      width: $fullWidth / 7;
+      height: $fullWidth / 7;
+      border: 1px solid $gray4;
+      padding: 3px 6px;
+
+      vertical-align: top;
+    }
+  }
+}
+
+
+.se-calendar-jumbo-today-cell {
+  background-color: $gray2;
+}
+
+
+.se-calendar-jumbo-first-day-of-month {
+  font-size: 22px;
+  font-weight: 300;
+  color: $blue;
+}
+
+
+.se-calendar-jumbo-event {
+  color: #FFF;
+  background-color: $greenDark;
+  border-radius: 2px;
+  padding: 3px 5px;
+  line-height: 1.2;
+
+  &.red { background-color: $red; }
+}

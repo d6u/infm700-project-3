@@ -1,0 +1,29 @@
+// --- Container ---
+.se-donate {
+
+}
+
+.se-donate-inner {
+  @extend .container;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+//
+.se-donate-option {
+  @extend .col-md-6;
+}
+
+.se-donate-option-inner {
+  padding: 20px;
+  color: #FFF;
+
+  &.blue {
+    background-color: $blue;
+  }
+
+  &.green {
+    background-color: $greenDark;
+  }
+}

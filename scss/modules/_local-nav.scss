@@ -1,0 +1,35 @@
+.md-local-nav {
+  background-color: $gray2;
+  a {
+    &.active {
+      background-color: saturate(lighten($blue, 9), 10) !important;
+      color: #FFF;
+    }
+    &:hover {
+      background-color: $blue !important;
+      color: #FFF;
+    }
+  }
+}
+
+.md-local-nav-parent {
+  font-size: 18px;
+  a {
+    color: black;
+  }
+}
+
+.md-local-nav-child {
+  a {
+    padding-left: 40px !important;
+    &::before {
+      // content: '->';
+    }
+  }
+}
+
+.md-local-nav-third-lv-item {
+  a {
+    padding-left: 80px !important;
+  }
+}

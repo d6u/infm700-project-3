@@ -1,0 +1,79 @@
+$smallWidth: 480px;
+
+
+// --- Container ---
+.se-footer {
+  @extend .clearfix;
+  background-color: $gray6;
+  color: #FFF;
+}
+
+.se-footer-inner {
+  @extend .container;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+
+// --- Level 1 ---
+.se-footer-i-contact-info {
+  @extend .col-md-4;
+  margin-bottom: 20px;
+}
+
+.se-footer-i-subscribe {
+  @extend .se-footer-i-contact-info;
+}
+
+.se-footer-i-search {
+  @extend .se-footer-i-contact-info;
+}
+
+
+// --- Components ---
+.se-footer-section-header {
+  @extend .lead;
+}
+
+.se-footer-section-list {
+  font-size: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  span:first-child {
+    width: 80px;
+    display: inline-block;
+  }
+}
+
+.se-footer-section-input {
+  @extend .form-control;
+  margin-bottom: 10px;
+}
+
+.se-footer-social-networks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  li {
+    display: inline-block;
+  }
+}
+
+
+// --- Copyright ---
+.se-footer-copyright {
+  background-color: #000;
+  font-size: 14px;
+  font-weight: 300;
+  color: #FFF;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+
+  @media screen and (max-width: $smallWidth - 1px) {
+    font-size: 11px;
+  }
+}
