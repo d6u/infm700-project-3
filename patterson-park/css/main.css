@@ -5525,3 +5525,10 @@ html, body {
     background-color: #5d9cec; }
   .se-donate-option-inner.green {
     background-color: #8cc152; }
+
+.se-events-calendar iframe {
+  width: 100%; }
+
+.se-events-calendar-header {
+  text-align: center;
+  margin-bottom: 50px; }
