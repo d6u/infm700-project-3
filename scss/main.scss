@@ -28,6 +28,13 @@ html, body {
       right: 90%;
     }
   }
+
+  @include respond-to(screen-md) {
+    &.pushed {
+      right: 0;
+      &.pushed-two-level { right: 0; }
+    }
+  }
 }
 
 

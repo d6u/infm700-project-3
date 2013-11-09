@@ -5025,6 +5025,11 @@ html, body {
     right: 80%; }
     .ly-inner-wrap.pushed.pushed-two-level {
       right: 90%; }
+  @media (min-width: 992px) {
+    .ly-inner-wrap.pushed {
+      right: 0; }
+      .ly-inner-wrap.pushed.pushed-two-level {
+        right: 0; } }
 
 .md-post-item-picture-wall {
   background-color: #f5f7fa;
@@ -5161,18 +5166,12 @@ html, body {
   height: 44px;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5); }
-  @media (min-width: 992px) {
-    .se-navbar {
-      height: 88px; } }
 
 .se-navbar-brand {
   height: 100%;
   text-align: center;
   line-height: 44px;
   overflow: hidden; }
-  @media (min-width: 992px) {
-    .se-navbar-brand {
-      text-align: left; } }
 
 .se-navbar-brand-logo {
   height: 100%;
@@ -5183,9 +5182,6 @@ html, body {
 .se-navbar-brand-show-menu {
   float: right;
   width: 44px; }
-  @media (min-width: 992px) {
-    .se-navbar-brand-show-menu {
-      display: none; } }
 
 .se-navbar-brand-title {
   font-size: 22px;
@@ -5195,23 +5191,9 @@ html, body {
     .se-navbar-brand-title a:hover {
       color: #434a54;
       text-decoration: none; }
-  @media (min-width: 992px) {
-    .se-navbar-brand-title {
-      line-height: 40px;
-      margin-top: 4px; } }
 
 .se-navbar-brand-social-links {
   display: none; }
-  @media (min-width: 992px) {
-    .se-navbar-brand-social-links {
-      display: block;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      line-height: 36px; }
-      .se-navbar-brand-social-links li {
-        float: left;
-        width: 44px; } }
 
 .se-navbar-menus {
   position: absolute;
@@ -5246,19 +5228,42 @@ html, body {
     background-color: #434a54;
     -webkit-transition: right 200ms;
     transition: right 200ms; }
-  @media (min-width: 992px) {
-    .se-navbar-menus {
-      right: 0;
-      background-color: transparent;
-      height: 88px;
-      width: auto; }
-      .se-navbar-menus a {
-        color: #434a54; } }
 
 .ly-inner-wrap.pushed-two-level .sub-menu.selected {
   right: -12.5%; }
 
 @media (min-width: 992px) {
+  .se-navbar {
+    height: 88px; }
+
+  .se-navbar-brand {
+    text-align: left; }
+
+  .se-navbar-brand-show-menu {
+    display: none; }
+
+  .se-navbar-brand-title {
+    line-height: 40px;
+    margin-top: 4px; }
+
+  .se-navbar-brand-social-links {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 36px; }
+    .se-navbar-brand-social-links li {
+      float: left;
+      width: 44px; }
+
+  .se-navbar-menus {
+    right: 0;
+    background-color: transparent;
+    height: 88px;
+    width: auto; }
+    .se-navbar-menus a {
+      color: #434a54; }
+
   .se-navbar-menu-top {
     line-height: 40px;
     margin-top: 4px !important; }
@@ -5266,16 +5271,17 @@ html, body {
       float: left;
       height: 40px !important;
       position: relative; }
-      .se-navbar-menu-top > li:hover {
-        background-color: #74aaef; }
-        .se-navbar-menu-top > li:hover > a {
-          color: #FFF; }
-        .se-navbar-menu-top > li:hover .sub-menu {
-          display: block; }
+      .se-navbar-menu-top > li:hover > a {
+        color: #4a89dc;
+        background-color: transparent; }
+        .se-navbar-menu-top > li:hover > a:hover {
+          color: #5d9cec; }
+      .se-navbar-menu-top > li:hover .sub-menu {
+        display: block; }
     .se-navbar-menu-top .sub-menu {
       display: none;
       top: 100%;
-      right: 0;
+      right: 0 !important;
       height: auto;
       -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
       box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); }
@@ -5283,13 +5289,11 @@ html, body {
         height: 40px; }
       .se-navbar-menu-top .sub-menu a {
         color: #FFF;
-        line-height: 40px; } }
+        line-height: 40px; }
 
-@media (min-width: 992px) {
   .sub-menu-back-btn {
-    display: none; } }
+    display: none; }
 
-@media (min-width: 992px) {
   .se-navbar-menu-lower {
     line-height: 40px;
     margin-right: 4px !important; }
@@ -5305,7 +5309,6 @@ html, body {
       color: #FFF; }
       .se-navbar-menu-lower a:hover {
         background-color: #a0d468; } }
-
 .se-banner {
   height: 350px;
   background-color: #f5f7fa; }
