@@ -18,20 +18,6 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
   <?php wp_head(); ?>
-  <script>
-  $(function() {
-    $('#js-show-menu').on('click', function(event) {
-      $('.ly-inner-wrap').toggleClass('pushed');
-    });
-    $('.se-navbar-menus').on('click', 'a', function() {
-      if ($(this).next('ul.sub-menu').length) {
-        $(this).next('ul.sub-menu').toggleClass('selected');
-        $('.ly-inner-wrap').toggleClass('pushed-two-level');
-        return false;
-      }
-    })
-  });
-  </script>
 </head>
 <body>
 
@@ -74,3 +60,29 @@
         'depth'          => 1
       )); ?>
     </nav>
+
+    <!-- TODO: functions for menu behavior on mobile device move to seperate file when finish-->
+    <script>
+      $(function() {
+        // show/hide menu
+        $('#js-show-menu').on('click', function(event) {
+          $('.ly-inner-wrap').toggleClass('pushed');
+        });
+
+        // show sub menu
+        $('.se-navbar-menus').on('click', '.se-navbar-menu-top > li > a', function() {
+          if ($(this).next('ul.sub-menu').length) {
+            $(this).next('ul.sub-menu').toggleClass('selected');
+            $('.ly-inner-wrap').toggleClass('pushed-two-level');
+            return false;
+          }
+        })
+
+        // hide sub menu
+        $('.se-navbar-menus').on('click', '.sub-menu-back-btn > a', function() {
+          $(this).parents('.sub-menu.selected').removeClass('selected');
+          $('.ly-inner-wrap').removeClass('pushed-two-level');
+          return false;
+        });
+      });
+    </script>
