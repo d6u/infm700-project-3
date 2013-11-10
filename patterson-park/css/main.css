@@ -323,13 +323,13 @@ hr {
 p {
   margin: 0 0 10px; }
 
-.lead, .se-footer-section-header, .se-page-header-call-to-action-paragraph {
+.lead, .se-footer-section-header, .se-page-header-call-to-action-paragraph, .se-page-header-place-description-paragraph {
   margin-bottom: 20px;
   font-size: 16px;
   font-weight: 200;
   line-height: 1.4; }
   @media (min-width: 768px) {
-    .lead, .se-footer-section-header, .se-page-header-call-to-action-paragraph {
+    .lead, .se-footer-section-header, .se-page-header-call-to-action-paragraph, .se-page-header-place-description-paragraph {
       font-size: 21px; } }
 
 small,
@@ -5524,7 +5524,7 @@ html, body {
   padding-right: 15px;
   margin-bottom: 20px; }
 
-.se-page-header-call-to-action-paragraph {
+.se-page-header-call-to-action-paragraph, .se-page-header-place-description-paragraph {
   background-color: rgba(74, 137, 220, 0.8);
   color: #FFF;
   padding: 15px;

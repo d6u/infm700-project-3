@@ -41,9 +41,14 @@
 
 .se-page-header-call-to-action-button {}
 
-// Header with Map
+// Header of Places Map
 .se-page-map-wrap {
   iframe { width: 100%; }
+}
+
+// Header of Place
+.se-page-header-place-description-paragraph {
+  @extend .se-page-header-call-to-action-paragraph;
 }
 
 
