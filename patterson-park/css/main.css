@@ -5530,6 +5530,9 @@ html, body {
   padding: 15px;
   max-width: 600px; }
 
+.se-page-map-wrap iframe {
+  width: 100%; }
+
 .se-corporate-partner-image {
   margin-bottom: 20px;
   text-align: center; }

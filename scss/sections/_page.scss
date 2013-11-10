@@ -39,8 +39,11 @@
   max-width: 600px;
 }
 
-.se-page-header-call-to-action-button {
+.se-page-header-call-to-action-button {}
 
+// Header with Map
+.se-page-map-wrap {
+  iframe { width: 100%; }
 }
 
 
