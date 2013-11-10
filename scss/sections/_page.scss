@@ -51,30 +51,85 @@
   @extend .se-page-header-call-to-action-paragraph;
 }
 
-
-
-
-
-.se-page-container {
-  @extend .container;
+// Header of Event
+.se-page-header-event-wrap {
+  @extend .clearfix;
 }
 
-
-// Corporate Partner
-.se-corporate-partner {}
-
-.se-corporate-partner-image {
-  margin-bottom: 20px;
+// datetime
+.se-page-header-event-datetime {
+  overflow: hidden;
+  height: 200px;
+  background-color: $red;
   text-align: center;
-  img {
-    max-width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #FFF;
+}
+
+.se-page-header-event-date {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.se-page-header-event-day {
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.se-page-header-event-time {
+  font-size: 18px;
+}
+
+// location
+.se-page-header-event-location {
+  height: 200px;
+  position: relative;
+}
+
+.se-page-header-event-map-canvas {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.se-page-header-event-address {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(#FFF, .8);
+  padding: 10px;
+  font-size: 18px;
+  line-height: 1.2;
+  a {
+    text-decoration: underline;
   }
 }
 
-.se-corporate-partner-donate-button {
-  margin-bottom: 20px;
-  text-align: center;
-  a {
-    width: 200px;
+@include respond-to(screen-md) {
+  .se-page-header-event-wrap {
+    width: 800px;
+    height: 300px;
+    margin: 25px auto;
+  }
+
+  .se-page-header-event-datetime {
+    width: 50%;
+    float: left;
+    height: 100%;
+  }
+
+  .se-page-header-event-date {
+    margin-top: 42px;
+  }
+
+  .se-page-header-event-day {
+    font-size: 88px;
+  }
+
+  .se-page-header-event-location {
+    @extend .se-page-header-event-datetime;
   }
 }
