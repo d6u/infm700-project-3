@@ -1,8 +1,8 @@
 /*
 Theme Name: Friends of Patterson Park
-Author: Team Yellow
+Author: INFM 700 Fall 2013 Team Yellow
 Author URI: http://wordpress.org/
-Description: This theme is built for INFM700 Project 3, Fall 2013
+Description: This theme is built for INFM700 Project 3, Fall 2013 at the University of Maryland
 Version: 0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -10,3 +10,5 @@ Tags: white, green
 Text Domain: patterson
 */
 
+
+@import url('css/dodge_mod_bootstrap.css');
