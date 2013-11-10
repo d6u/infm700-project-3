@@ -49,6 +49,7 @@
 
       </div>
     </footer>
+	<?php require "scripts.php" ?>
 
     <div class="se-footer-copyright">Copyright © 2013 Friends of Patterson Park. All Rights Reserved.</div>
 
