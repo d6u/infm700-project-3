@@ -5589,6 +5589,11 @@ html, body {
 
   .se-page-header-event-day {
     font-size: 88px; } }
+.se-page-header-calendar {
+  margin-top: 25px; }
+  .se-page-header-calendar iframe {
+    width: 100%; }
+
 .se-donate-inner {
   padding-top: 30px;
   padding-bottom: 30px; }

@@ -133,3 +133,9 @@
     @extend .se-page-header-event-datetime;
   }
 }
+
+// Header for Events Calendar
+.se-page-header-calendar {
+  margin-top: 25px;
+  iframe { width: 100%; }
+}
