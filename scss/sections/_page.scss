@@ -1,3 +1,52 @@
+.se-page-outer-wrap {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+
+// --- Feature Image ---
+//
+.se-page-feature-image {
+  position: absolute;
+  z-index: -1;
+}
+
+
+// --- Content ---
+//
+.se-page-inner-wrap {
+  @extend .container;
+}
+
+// Header
+.se-page-header {
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.se-page-header-title {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 20px;
+}
+
+.se-page-header-call-to-action-paragraph {
+  @extend .lead;
+  background-color: rgba($blueDark, .8);
+  color: #FFF;
+  padding: 15px;
+  max-width: 600px;
+}
+
+.se-page-header-call-to-action-button {
+
+}
+
+
+
+
+
 .se-page-container {
   @extend .container;
 }
