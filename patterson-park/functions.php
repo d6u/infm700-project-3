@@ -21,3 +21,8 @@ class Header_Menu_Walker extends Walker_Nav_Menu {
     $output .= "$indent\t<li class=\"sub-menu-back-btn menu-item\"><a href=\"#\">Back</a></li>\n";
   }
 }
+
+
+// Enable feature image for both posts and pages
+//
+add_theme_support('post-thumbnails');

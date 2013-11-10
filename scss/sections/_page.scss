@@ -1,23 +1,141 @@
-.se-page-container {
+.se-page-outer-wrap {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+
+// --- Feature Image ---
+//
+.se-page-feature-image {
+  position: absolute;
+  z-index: -1;
+}
+
+
+// --- Content ---
+//
+.se-page-inner-wrap {
   @extend .container;
 }
 
+// Header
+.se-page-header {
+  overflow: hidden;
+  margin-bottom: 25px;
+}
 
-// Corporate Partner
-.se-corporate-partner {}
-
-.se-corporate-partner-image {
+.se-page-header-title {
+  padding-left: 15px;
+  padding-right: 15px;
   margin-bottom: 20px;
+}
+
+.se-page-header-call-to-action-paragraph {
+  @extend .lead;
+  background-color: rgba($blueDark, .8);
+  color: #FFF;
+  padding: 15px;
+  max-width: 600px;
+}
+
+.se-page-header-call-to-action-button {}
+
+// Header of Places Map
+.se-page-map-wrap {
+  iframe { width: 100%; }
+}
+
+// Header of Place
+.se-page-header-place-description-paragraph {
+  @extend .se-page-header-call-to-action-paragraph;
+}
+
+// Header of Event
+.se-page-header-event-wrap {
+  @extend .clearfix;
+}
+
+// datetime
+.se-page-header-event-datetime {
+  overflow: hidden;
+  height: 200px;
+  background-color: $red;
   text-align: center;
-  img {
-    max-width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #FFF;
+}
+
+.se-page-header-event-date {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.se-page-header-event-day {
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.se-page-header-event-time {
+  font-size: 18px;
+}
+
+// location
+.se-page-header-event-location {
+  height: 200px;
+  position: relative;
+}
+
+.se-page-header-event-map-canvas {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.se-page-header-event-address {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(#FFF, .8);
+  padding: 10px;
+  font-size: 18px;
+  line-height: 1.2;
+  a {
+    text-decoration: underline;
   }
 }
 
-.se-corporate-partner-donate-button {
-  margin-bottom: 20px;
-  text-align: center;
-  a {
-    width: 200px;
+@include respond-to(screen-md) {
+  .se-page-header-event-wrap {
+    width: 800px;
+    height: 300px;
+    margin: 25px auto;
   }
+
+  .se-page-header-event-datetime {
+    width: 50%;
+    float: left;
+    height: 100%;
+  }
+
+  .se-page-header-event-date {
+    margin-top: 42px;
+  }
+
+  .se-page-header-event-day {
+    font-size: 88px;
+  }
+
+  .se-page-header-event-location {
+    @extend .se-page-header-event-datetime;
+  }
+}
+
+// Header for Events Calendar
+.se-page-header-calendar {
+  margin-top: 25px;
+  iframe { width: 100%; }
 }

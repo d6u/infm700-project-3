@@ -7,6 +7,7 @@
 // --- Base ---
 html, body {
   height: 100%;
+  background-color: $gray1;
 }
 
 
@@ -52,3 +53,5 @@ html, body {
 @import 'sections/calendar-jumbo';
 @import 'sections/page';
 @import 'sections/donate';
+@import 'sections/events-calendar';
+@import 'sections/post';
