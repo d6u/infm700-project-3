@@ -3,12 +3,19 @@
 
 
 <div class="se-post-container">
+  <?php while ( have_posts() ) : the_post(); ?>
 
-  <article class="se-post-container-inner">
-    <?php while ( have_posts() ) : the_post(); ?>
+    <!-- Feature Image -->
+    <?php if (has_post_thumbnail()) : ?>
+      <div class="se-post-container-feature-image">
+        <?php the_post_thumbnail(); ?>
+      </div>
+    <?php endif; ?>
 
+
+    <article class="se-post-container-inner">
       <!-- Header -->
-      <section class="se-post-header">
+      <section class="se-post-header<?php if (has_post_thumbnail()) echo ' has-feature-image'; ?>">
         <header class="se-post-title">
           <h1><?php the_title(); ?></h1>
         </header>
@@ -28,10 +35,9 @@
           </div>
         </div>
       </section>
+    </article>
 
-    <?php endwhile; ?>
-  </article>
-
+  <?php endwhile; ?>
 </div>
 
 
