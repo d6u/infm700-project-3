@@ -22,20 +22,19 @@ foreach ($menu_items as $item) {
   }
 }
 ?>
-<div class="md-local-nav">
-  <ul class="nav">
-    <?php
-      foreach ($filtered_menu_items as $item) :
-        if (!$item->menu_item_parent) :
-    ?>
-      <li class="md-local-nav-parent">
-    <?php elseif ($item->menu_item_parent == $filtered_menu_items[0]->ID) : ?>
-      <li class="md-local-nav-child">
-    <?php else: ?>
-      <li class="md-local-nav-third-lv-item">
-    <?php endif; ?>
-        <a class="<?php if ($item->object_id == get_the_ID()) echo 'active' ?>" href="<?= $item->url ?>"><?= $item->title ?></a>
-      </li>
-    <?php endforeach; ?>
-  </ul>
-</div>
+
+<ul class="nav">
+  <?php
+    foreach ($filtered_menu_items as $item) :
+      if (!$item->menu_item_parent) :
+  ?>
+    <li class="md-local-nav-parent">
+  <?php elseif ($item->menu_item_parent == $filtered_menu_items[0]->ID) : ?>
+    <li class="md-local-nav-child">
+  <?php else: ?>
+    <li class="md-local-nav-third-lv-item">
+  <?php endif; ?>
+      <a class="<?php if ($item->object_id == get_the_ID()) echo 'active' ?>" href="<?= $item->url ?>"><?= $item->title ?></a>
+    </li>
+  <?php endforeach; ?>
+</ul>

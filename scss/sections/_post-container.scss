@@ -1,0 +1,30 @@
+.se-post-container {
+  @extend .clearfix;
+  position: relative;
+}
+
+.se-post-container-inner {
+  @include respond-to(screen-md) {
+    width: 970px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.se-post-title {
+  text-align: center;
+  h1 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+.se-post-body {
+  background-color: #FFF;
+  @include box-shadow(0 2px 6px rgba(0,0,0,.2));
+}
+
+.se-post-body-content {
+  padding: 45px;
+}

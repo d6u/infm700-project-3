@@ -1,43 +1,37 @@
 <?php get_header(); ?>
-<?php get_template_part('content', 'banner'); ?>
+<?php // get_template_part('content', 'banner'); ?>
 
 
-<div class="container">
-  <div class="row">
-    <!-- Local Navigation -->
-    <div class="col-md-3 col-sm-4"><?php get_sidebar(); ?></div>
+<div class="se-post-container">
 
-    <!-- Page Content -->
-    <div class="col-md-9 col-sm-8">
-      <?php while ( have_posts() ) : the_post(); ?>
+  <article class="se-post-container-inner">
+    <?php while ( have_posts() ) : the_post(); ?>
 
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <header class="entry-header">
-            <?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-            <div class="entry-thumbnail">
-              <?php the_post_thumbnail(); ?>
-            </div>
-            <?php endif; ?>
+      <!-- Header -->
+      <section class="se-post-header">
+        <header class="se-post-title">
+          <h1><?php the_title(); ?></h1>
+        </header>
+      </section>
 
-            <h1 class="entry-title"><?php the_title(); ?></h1>
-          </header><!-- .entry-header -->
-
-          <div class="entry-content">
+      <!-- Body -->
+      <section class="se-post-body row">
+        <div class="md-local-nav col-md-3 col-sm-4"><?php get_sidebar(); ?></div>
+        <div class="col-md-9 col-sm-8">
+          <div class="se-post-body-content">
             <?php the_content(); ?>
             <?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
-          </div><!-- .entry-content -->
+            <footer class="entry-meta">
+              <?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
+            </footer><!-- .entry-meta -->
+            <?php comments_template(); ?>
+          </div>
+        </div>
+      </section>
 
-          <footer class="entry-meta">
-            <?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
-          </footer><!-- .entry-meta -->
-        </article><!-- #post -->
+    <?php endwhile; ?>
+  </article>
 
-        <?php comments_template(); ?>
-
-      <?php endwhile ?>
-    </div>
-
-  </div>
 </div>
 
 

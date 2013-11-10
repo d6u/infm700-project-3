@@ -4620,12 +4620,12 @@ button.close {
 
   .carousel-indicators {
     bottom: 20px; } }
-.clearfix:before, .md-post-item-body:before, .md-post-item-b-cb-event-date:before, .md-post-item-b-cb-event-date-location:before, .se-navbar-menu-top:before, .se-navbar-menu-lower:before, .se-banner-p-i-caption:before, .se-map-block-d-container:before, .se-footer:before, .se-calendar-jumbo:before, .clearfix:after, .md-post-item-body:after, .md-post-item-b-cb-event-date:after, .md-post-item-b-cb-event-date-location:after, .se-navbar-menu-top:after, .se-navbar-menu-lower:after, .se-banner-p-i-caption:after, .se-map-block-d-container:after, .se-footer:after, .se-calendar-jumbo:after {
+.clearfix:before, .md-post-item-body:before, .md-post-item-b-cb-event-date:before, .md-post-item-b-cb-event-date-location:before, .se-navbar-menu-top:before, .se-navbar-menu-lower:before, .se-banner-p-i-caption:before, .se-map-block-d-container:before, .se-footer:before, .se-calendar-jumbo:before, .se-post-container:before, .clearfix:after, .md-post-item-body:after, .md-post-item-b-cb-event-date:after, .md-post-item-b-cb-event-date-location:after, .se-navbar-menu-top:after, .se-navbar-menu-lower:after, .se-banner-p-i-caption:after, .se-map-block-d-container:after, .se-footer:after, .se-calendar-jumbo:after, .se-post-container:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
-.clearfix:after, .md-post-item-body:after, .md-post-item-b-cb-event-date:after, .md-post-item-b-cb-event-date-location:after, .se-navbar-menu-top:after, .se-navbar-menu-lower:after, .se-banner-p-i-caption:after, .se-map-block-d-container:after, .se-footer:after, .se-calendar-jumbo:after {
+.clearfix:after, .md-post-item-body:after, .md-post-item-b-cb-event-date:after, .md-post-item-b-cb-event-date-location:after, .se-navbar-menu-top:after, .se-navbar-menu-lower:after, .se-banner-p-i-caption:after, .se-map-block-d-container:after, .se-footer:after, .se-calendar-jumbo:after, .se-post-container:after {
   clear: both; }
 
 .center-block {
@@ -5008,7 +5008,8 @@ td.visible-print {
   td.hidden-print {
     display: none !important; } }
 html, body {
-  height: 100%; }
+  height: 100%;
+  background-color: #f5f7fa; }
 
 .ly-outer-wrap {
   position: relative;
@@ -5164,6 +5165,7 @@ html, body {
 .se-navbar {
   position: relative;
   height: 44px;
+  background-color: #FFF;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5); }
 
@@ -5532,3 +5534,27 @@ html, body {
 .se-events-calendar-header {
   text-align: center;
   margin-bottom: 50px; }
+
+.se-post-container {
+  position: relative; }
+
+@media (min-width: 992px) {
+  .se-post-container-inner {
+    width: 970px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px; } }
+
+.se-post-title {
+  text-align: center; }
+  .se-post-title h1 {
+    margin-top: 50px;
+    margin-bottom: 50px; }
+
+.se-post-body {
+  background-color: #FFF;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); }
+
+.se-post-body-content {
+  padding: 45px; }
