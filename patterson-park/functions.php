@@ -18,7 +18,7 @@ class Header_Menu_Walker extends Walker_Nav_Menu {
   function start_lvl( &$output, $depth = 0, $args = array() ) {
     $indent = str_repeat("\t", $depth);
     $output .= "\n$indent<ul class=\"sub-menu\">\n";
-    $output .= "$indent\t<li class=\"sub-menu-back-btn menu-item\"><a href=\"#\">Back</a></li>\n";
+    $output .= "$indent\t<li class=\"sub-menu-back-btn menu-item\"><a href=\"#\">". __('Back', 'patterson') ."</a></li>\n";
   }
 }
 
@@ -26,3 +26,20 @@ class Header_Menu_Walker extends Walker_Nav_Menu {
 // Enable feature image for both posts and pages
 //
 add_theme_support('post-thumbnails');
+
+// For internationalization
+// Source: http://wordpress.org/support/topic/plugin-polylang-how-to-internationalize-a-theme
+add_action( 'after_setup_theme', 'setup' );
+
+function setup() {
+	load_theme_textdomain('patterson', get_template_directory());
+}
+
+
+if ( function_exists('register_sidebar') )
+	register_sidebar(array(
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
