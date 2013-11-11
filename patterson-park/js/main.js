@@ -1,48 +1,5 @@
 (function(window, $, undefined) {
 
-  // --- Navbar Mobile Menu ---
-  var screenSm;
-
-  // adjust navbar menu behavior based on window resize
-  function resizeCallback() {
-    screenSm = $(window).width() >= 992 ? false : true;
-    // clean css classes
-    $('#js-navbar').removeClass('se-navbar-expanded');
-    $('.se-navbar-top-menus-item').removeClass('se-navbar-top-menus-item-open');
-    $('#se-navbar-menus').removeClass('se-navbar-menus-dropdown-open');
-  };
-  resizeCallback();
-
-  var resizeTimer;
-  $(window).resize(function() {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(resizeCallback, 100);
-  });
-
-  // mobile navbar menu behavior
-  $('#js-navbar-toggle-menu').on('click', function() {
-    $('#js-navbar').toggleClass('se-navbar-expanded');
-    return false;
-  });
-
-  $('.js-navbar-menus-item').on('click', function() {
-    if (screenSm) {
-      $(this).parent().addClass('se-navbar-top-menus-item-open');
-      $('#se-navbar-menus').scrollTop(0)
-        .addClass('se-navbar-menus-dropdown-open');
-      return false;
-    }
-  });
-
-  $('.js-navbar-menus-item-back').on('click', function() {
-    $(this).parents('.se-navbar-top-menus-item')
-      .removeClass('se-navbar-top-menus-item-open');
-    $('#se-navbar-menus').removeClass('se-navbar-menus-dropdown-open');
-    return false;
-  });
-
-
-
   var mapOptions = {
     center: new google.maps.LatLng(39.290734,-76.550681),
     zoom: 13,
