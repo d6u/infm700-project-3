@@ -5227,8 +5227,9 @@ html, body {
       background-color: #4a89dc; }
   .se-navbar-menus .sub-menu {
     position: absolute;
+    z-index: 1001;
     top: 0;
-    right: -100%;
+    right: -112.5%;
     width: 100%;
     height: 100%;
     background-color: #434a54;
@@ -5271,6 +5272,7 @@ html, body {
       color: #434a54; }
 
   .se-navbar-menu-top {
+    float: right;
     line-height: 40px;
     margin-top: 4px !important; }
     .se-navbar-menu-top > li {
@@ -5310,12 +5312,12 @@ html, body {
       height: 40px !important; }
     .se-navbar-menu-lower a {
       font-size: 16px;
-      background-color: #8cc152;
+      background-color: #35AD53;
       border-radius: 4px;
       line-height: 34px;
       color: #FFF; }
       .se-navbar-menu-lower a:hover {
-        background-color: #a0d468; } }
+        background-color: #41c562; } }
 .se-banner {
   height: 350px;
   background-color: #f5f7fa; }
