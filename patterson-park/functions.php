@@ -1,5 +1,15 @@
 <?php
 
+// Load CSS into Templates
+//
+function theme_styles() {
+  wp_enqueue_style('default', get_template_directory_uri().'/style.css');
+  wp_enqueue_style('main',    get_template_directory_uri().'/css/main.css');
+  wp_enqueue_style('dodge',   get_template_directory_uri().'/css/dodge_mod_bootstrap.css');
+}
+add_action('wp_enqueue_scripts', 'theme_styles');
+
+
 // Enable Menus
 //
 add_action('init', 'register_my_menu');
