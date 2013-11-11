@@ -5366,6 +5366,8 @@ html, body {
 
 .se-front-page-feature-block-wrap {
   padding: 15px; }
+  .se-front-page-feature-block-wrap img {
+    margin-bottom: 20px; }
 
 .se-map-block {
   width: 100%;
