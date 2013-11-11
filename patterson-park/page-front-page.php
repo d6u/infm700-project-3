@@ -23,35 +23,55 @@ get_header();
 
 <!-- Content -->
 <div class="container">
+  <h2 align="center"><?php _e('Friends Features', 'patterson') ?></h2>
+
   <div class="row">
-    <h2 align="center"><?php _e('Friends Features', 'patterson') ?></h2>
-    <div class="col-md-4">
-      <div class="se-front-page-feature-block-wrap">
-        <h3><a href="<?php the_field('1st_block_url'); ?>"><?php _e(get_field('1st_block_title'), 'patterson')?></a></h3>
-        <p><?php _e(get_field('1st_block_paragraph'), 'patterson') ?></p>
-        <img src="<?php echo get_field('1st_block_image')['url']; ?>" alt="<?php _e('Tree Team', 'patterson')?>" class="img-responsive">
-        <p><a class="btn btn-primary btn-md" href="<?php the_field('1st_block_url'); ?>">Go to <?php _e(get_field('1st_block_title'), 'patterson') ?> &raquo;</a></p>
+    <!-- Feature Blocks -->
+    <div class="col-md-8">
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="se-front-page-feature-block-wrap">
+            <h3><a href="<?php the_field('1st_block_url'); ?>"><?php _e(get_field('1st_block_title'), 'patterson')?></a></h3>
+            <p><?php _e(get_field('1st_block_paragraph'), 'patterson') ?></p>
+            <img src="<?php echo get_field('1st_block_image')['url']; ?>" alt="<?php _e('Tree Team', 'patterson')?>" class="img-responsive">
+            <p><a class="btn btn-primary btn-md" href="<?php the_field('1st_block_url'); ?>">Go to <?php _e(get_field('1st_block_title'), 'patterson') ?> &raquo;</a></p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="se-front-page-feature-block-wrap">
+            <h3><a href="<?php the_field('2nd_block_url'); ?>"><?php _e(get_field('2nd_block_title'), 'patterson') ?></a></h3>
+            <p><?php _e(get_field('2nd_block_paragraph'), 'patterson') ?></p>
+            <img src="<?php echo get_field('2nd_block_image')['url']; ?>" alt="<?php _e('Kids Day', 'patterson')?>" class="img-responsive">
+            <p><a class="btn btn-primary btn-md" href="<?php the_field('2nd_block_url'); ?>">Go to <?php _e(get_field('2nd_block_title'), 'patterson') ?> &raquo;</a></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="se-front-page-feature-block-wrap">
+            <h3><a href="<?php the_field('3rd_block_url'); ?>"><?php _e(get_field('3rd_block_title'), 'patterson') ?></a></h3>
+            <p><?php _e(get_field('3rd_block_paragraph')) ?></p>
+            <img src="<?php echo get_field('3rd_block_image')['url']; ?>" alt="<?php _e('Patterson Park Swimming Pool', 'patterson')?>" class="img-responsive">
+            <p><a class="btn btn-primary btn-md" href="<?php the_field('3rd_block_url'); ?>">Go to <?php _e(get_field('3rd_block_title'), 'patterson')?> &raquo;</a></p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+
+        </div>
+
       </div>
     </div>
 
-
+    <!-- Facebook -->
     <div class="col-md-4">
-      <div class="se-front-page-feature-block-wrap">
-        <h3><a href="<?php the_field('2nd_block_url'); ?>"><?php _e(get_field('2nd_block_title'), 'patterson') ?></a></h3>
-        <p><?php _e(get_field('2nd_block_paragraph'), 'patterson') ?></p>
-        <img src="<?php echo get_field('2nd_block_image')['url']; ?>" alt="<?php _e('Kids Day', 'patterson')?>" class="img-responsive">
-        <p><a class="btn btn-primary btn-md" href="<?php the_field('2nd_block_url'); ?>">Go to <?php _e(get_field('2nd_block_title'), 'patterson') ?> &raquo;</a></p>
-      </div>
-    </div>
-
-
-    <div class="col-md-4">
-      <div class="se-front-page-feature-block-wrap">
-        <h3><a href="<?php the_field('3rd_block_url'); ?>"><?php _e(get_field('3rd_block_title'), 'patterson') ?></a></h3>
-        <p><?php _e(get_field('3rd_block_paragraph')) ?></p>
-        <img src="<?php echo get_field('3rd_block_image')['url']; ?>" alt="<?php _e('Patterson Park Swimming Pool', 'patterson')?>" class="img-responsive">
-        <p><a class="btn btn-primary btn-md" href="<?php the_field('3rd_block_url'); ?>">Go to <?php _e(get_field('3rd_block_title'), 'patterson')?> &raquo;</a></p>
-      </div>
+      <div class="fb-like-box" data-href="https://www.facebook.com/infm700teamyellow" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="true"></div>
     </div>
   </div>
 </div>
