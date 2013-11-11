@@ -6,30 +6,26 @@
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title><?php wp_title('|'); ?></title>
+  <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
   <meta name="description" content="<?php bloginfo( 'description' ); ?>">
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/main.css">
-  <link rel="stylesheet" href="<?= get_stylesheet_uri(); ?>">
-  <script src="<?= get_template_directory_uri(); ?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-  <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyA9TKtktEN4RfwW36zle63skJAlvjmqb5U&sensor=true"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
   <?php wp_head(); ?>
 </head>
-<body>
 
-<!--Facebook plugin code-->
+<body>
+<?php // Facebook plugin code ?>
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=756034541088705";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=756034541088705";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
 
 
 <div class="ly-outer-wrap">
@@ -70,55 +66,3 @@
         'depth'          => 1
       )); ?>
     </nav>
-
-    <!-- TODO: functions for menu behavior on mobile device move to seperate file when finish-->
-    <script>
-      $(function() {
-        // show/hide menu
-        $('#js-show-menu').on('click', function(event) {
-          $('.ly-inner-wrap').toggleClass('pushed');
-          if (!$('.ly-inner-wrap').hasClass('pushed')) {
-            $('.ly-inner-wrap').removeClass('pushed-two-level');
-            $('.se-navbar-menu-top .sub-menu').removeClass('selected');
-          }
-        });
-
-        // show sub menu
-        $('.se-navbar-menus').on('click', '.se-navbar-menu-top > li > a', function() {
-          if ($('.se-navbar-menus').height() != 88) {
-            // on mobile device
-            if (!$('.ly-inner-wrap').hasClass('pushed-two-level')) {
-              // no sub menu showed
-              if ($(this).next('ul.sub-menu').length) {
-                $(this).next('ul.sub-menu').addClass('selected');
-                $('.ly-inner-wrap').addClass('pushed-two-level');
-                return false;
-              }
-            } else {
-              // has sub menu showed
-              if ($(this).next('ul.sub-menu').length) {
-                // has sub menu element
-                if ($(this).next('ul.sub-menu').hasClass('selected')) {
-                  // clicked current showed sub menu's parent
-                  $(this).next('ul.sub-menu').removeClass('selected');
-                  $('.ly-inner-wrap').removeClass('pushed-two-level');
-                  return false;
-                } else {
-                  // clicked other element
-                  $('.se-navbar-menu-top .sub-menu').removeClass('selected');
-                  $(this).next('ul.sub-menu').addClass('selected');
-                  return false;
-                }
-              }
-            }
-          }
-        })
-
-        // hide sub menu
-        $('.se-navbar-menus').on('click', '.sub-menu-back-btn > a', function() {
-          $(this).parents('.sub-menu.selected').removeClass('selected');
-          $('.ly-inner-wrap').removeClass('pushed-two-level');
-          return false;
-        });
-      });
-    </script>

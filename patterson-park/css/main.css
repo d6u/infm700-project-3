@@ -5306,7 +5306,8 @@ html, body {
   .se-navbar-menu-lower {
     line-height: 40px;
     margin-right: 4px !important;
-    float: right; }
+    float: right;
+    clear: both; }
     .se-navbar-menu-lower > li {
       float: left;
       padding: 3px;
@@ -5365,6 +5366,8 @@ html, body {
 
 .se-front-page-feature-block-wrap {
   padding: 15px; }
+  .se-front-page-feature-block-wrap img {
+    margin-bottom: 20px; }
 
 .se-map-block {
   width: 100%;
@@ -5669,3 +5672,7 @@ html, body {
   @media (min-width: 992px) {
     .se-post-body-content {
       padding: 45px; } }
+  .se-post-body-content img {
+    max-width: 100%;
+    height: 100%;
+    margin-bottom: 20px; }

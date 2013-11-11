@@ -1,5 +1,35 @@
 <?php
 
+// Load CSS into Templates
+//
+function theme_styles() {
+  wp_enqueue_style('default', get_template_directory_uri().'/style.css');
+  wp_enqueue_style('main',    get_template_directory_uri().'/css/main.css');
+  wp_enqueue_style('dodge',   get_template_directory_uri().'/css/dodge_mod_bootstrap.css');
+}
+add_action('wp_enqueue_scripts', 'theme_styles');
+
+
+// Load JavaScript into Templates
+//
+function theme_js() {
+  // register
+  wp_register_script('modernizr', get_template_directory_uri().'/js/modernizr-2.6.2.min.js');
+  wp_register_script('google_map', '//maps.googleapis.com/maps/api/js?key=AIzaSyA9TKtktEN4RfwW36zle63skJAlvjmqb5U&sensor=true', array(), '', true);
+  wp_register_script('bootstrap', get_template_directory_uri().'/js/bootstrap.min.js', array('jquery'), '', true);
+  wp_register_script('main', get_template_directory_uri().'/js/main.js', array('jquery', 'bootstrap', 'google_map'), '', true);
+  wp_register_script('page-event', get_template_directory_uri().'/js/page-event.js', array('jquery', 'google_map'), '', true);
+
+  // insert
+  wp_enqueue_script('modernizr');
+  wp_enqueue_script('main');
+  if (is_page_template('page-event.php')) {
+    wp_enqueue_script('page-event');
+  }
+}
+add_action('wp_enqueue_scripts', 'theme_js');
+
+
 // Enable Menus
 //
 add_action('init', 'register_my_menu');

@@ -49,11 +49,17 @@
 
       </div>
     </footer>
-	<?php require "scripts.php" ?>
-
     <div class="se-footer-copyright"><?php _e('Copyright © 2013 Friends of Patterson Park. All Rights Reserved.', 'patterson') ?></div>
-
   </div>
+
+  <?php wp_footer(); ?>
+
+  <script>
+  // var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+  // (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  // g.src='//www.google-analytics.com/ga.js';
+  // s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
 </div>
 
 

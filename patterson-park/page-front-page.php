@@ -63,7 +63,12 @@ get_header();
         </div>
 
         <div class="col-md-6">
-
+          <div class="se-front-page-feature-block-wrap">
+            <h3><a href="<?php the_field('4th_block_url'); ?>"><?php _e(get_field('4th_block_title'), 'patterson') ?></a></h3>
+            <p><?php _e(get_field('4th_block_paragraph')) ?></p>
+            <img src="<?php echo get_field('4th_block_image')['url']; ?>" alt="<?php _e('Patterson Park Swimming Pool', 'patterson')?>" class="img-responsive">
+            <p><a class="btn btn-primary btn-md" href="<?php the_field('4th_block_url'); ?>">Go to <?php _e(get_field('4th_block_title'), 'patterson')?> &raquo;</a></p>
+          </div>
         </div>
 
       </div>
