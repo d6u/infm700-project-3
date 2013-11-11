@@ -5306,7 +5306,8 @@ html, body {
   .se-navbar-menu-lower {
     line-height: 40px;
     margin-right: 4px !important;
-    float: right; }
+    float: right;
+    clear: both; }
     .se-navbar-menu-lower > li {
       float: left;
       padding: 3px;
