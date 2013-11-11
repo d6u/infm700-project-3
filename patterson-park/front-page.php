@@ -14,32 +14,60 @@
 <div class="container">
   <div class="row">
     <h2 align="center"><?php _e('Friends Features', 'patterson') ?></h2>
-    <div class="col-md-4">
-      <h3><a href="/get_involved/"><?php _e('Get Involved', 'patterson')?></a></h3>
-      <p><?php _e('The Friends of Patterson Park needs your help to keep Baltimores Best Backyard as a community oasis.  Volunteers and member donations help keep the Friends of Patterson Park going strong.  Get involved today!', 'patterson') ?></p>
-      <img src="/_img/treeTeam.jpg" alt="<?php _e('Tree Team', 'patterson')?>" class="img-responsive">
-      <p></p>
-      <p><a class="btn btn-primary btn-md" href="/get_involved/"><?php _e('Get Involved', 'patterson') ?> &raquo;</a></p>
+    <div class="col-lg-9">
+	
+		<div class = "row">
+		
+		`	<div class = "col-lg-6">
+				<br/>
+				<h3><a href="/get_involved/"><?php _e('Get Involved', 'patterson')?></a></h3>
+				  <p><?php _e('The Friends of Patterson Park needs your help to keep Baltimores Best Backyard as a community oasis.  Volunteers and member donations help keep the Friends of Patterson Park going strong.  Get involved today!', 'patterson') ?></p>
+				  <img src="/_img/treeTeam.jpg" alt="<?php _e('Tree Team', 'patterson')?>" class="img-responsive">
+				  <p></p>
+				  <p><a class="btn btn-primary btn-md" href="/get_involved/"><?php _e('Get Involved', 'patterson') ?> &raquo;</a></p>
+			</div>
+			
+			<div class="col-lg-6">
+			  <h3><a href="/events/events_calendar.php"><?php _e('Events Calendar', 'patterson') ?></a></h3>
+			  <p><?php _e('Learn more about the amazing events that happen in Patterson Park every day and our outreach partners who make these events happen.  Visit the Events Calendar to view upcoming Patterson Park events.', 'patterson') ?></p>
+			  <img src="/_img/test2.jpg" alt="<?php _e('Kids Day', 'patterson')?>" class="img-responsive">
+			  <p></p>
+			  <p><a class="btn btn-primary btn-md" href="/events/events_calendar.php"><?php _e('View Events Calendar', 'patterson') ?> &raquo;</a></p>
+			</div>
+		
+		
+		</div>
+		
+		<div class = "row">
+		
+			<div class="col-lg-6">
+			  <h3><a href="/park_places/park_map_and_resources.php"><?php _e('Park Map and Resources', 'patterson') ?></a></h3>
+			  <p><?php _e('Patterson Park is home to a recreational center, ice skating rink, swimming pool, sport fields, and more.  To find out how to get to Patterson Park and what the park can offer you, go to our Park Map.') ?></p>
+			  <img src="/_img/pool2.jpg" alt="<?php _e('Patterson Park Swimming Pool', 'patterson')?>" class="img-responsive">
+			  <p></p>
+			  <p><a class="btn btn-primary btn-md" href="/park_places/park_map_and_resources.php"><?php _e('Visit Park Map', 'patterson')?> &raquo;</a></p>
+			</div>
+			
+			<div class="col-lg-6">
+				<h3><a href="#"><?php _e('Our Partners', 'patterson') ?></a></h3>
+				<p><?php _e('Learn more about the organizations - foundations, corporations, and community organizations - that breathe life into Patterson Park and the Friends of Patterson Park.', 'patterson') ?></p>
+				<img src="" alt="<?php _e('Our Partners', 'patterson')?>" class="img-responsive">
+				<p><a class="btn btn-primary btn-md" href="jointhecommunity.php"><?php _e('Visit Our Partners', 'patterson')?> &raquo;</a></p>
+			</div>
+		
+		
+		</div>
+		
+	</div>
+	
+	<div class = "col-lg-3">
+    
+		<div class="fb-like-box" data-href="https://www.facebook.com/infm700teamyellow" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="true"></div>
+	  
     </div>
-
-
-    <div class="col-md-4">
-      <h3><a href="/events/events_calendar.php"><?php _e('Events Calendar', 'patterson') ?></a></h3>
-      <p><?php _e('Learn more about the amazing events that happen in Patterson Park every day and our outreach partners who make these events happen.  Visit the Events Calendar to view upcoming Patterson Park events.', 'patterson') ?></p>
-      <img src="/_img/test2.jpg" alt="<?php _e('Kids Day', 'patterson')?>" class="img-responsive">
-      <p></p>
-      <p><a class="btn btn-primary btn-md" href="/events/events_calendar.php"><?php _e('View Events Calendar', 'patterson') ?> &raquo;</a></p>
-    </div>
-
-
-    <div class="col-md-4">
-      <h3><a href="/park_places/park_map_and_resources.php"><?php _e('Park Map and Resources', 'patterson') ?></a></h3>
-      <p><?php _e('Patterson Park is home to a recreational center, ice skating rink, swimming pool, sport fields, and more.  To find out how to get to Patterson Park and what the park can offer you, go to our Park Map.') ?></p>
-      <img src="/_img/pool2.jpg" alt="<?php _e('Patterson Park Swimming Pool', 'patterson')?>" class="img-responsive">
-      <p></p>
-      <p><a class="btn btn-primary btn-md" href="/park_places/park_map_and_resources.php"><?php _e('Visit Park Map', 'patterson')?> &raquo;</a></p>
-    </div>
+    
   </div>
+  
 </div>
 
 <?php get_footer();

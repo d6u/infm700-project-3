@@ -32,13 +32,14 @@
 
       </header>
 
-
       <!-- Content -->
       <?php get_template_part('content', 'page-body'); ?>
 
     </div><!-- /.se-page-inner-wrap -->
 
   <?php endwhile; ?>
+  
+  
 </div>
 
 
