@@ -10,8 +10,13 @@ get_header();
 <div class="se-banner se-banner-homepage" style="background-image: url('<?php echo get_field('banner_image')['url']; ?>'); background-size: cover;">
   <div class="se-banner-p-inner">
     <div class="se-banner-p-i-caption">
+
       <h1 class="se-banner-p-i-c-title"><?php _e(get_field('banner_title'), 'patterson') ?></h1>
+
+      <?php if (get_field('banner_paragraph')) : ?>
       <p class="se-banner-p-i-c-intro"><?php _e(get_field('banner_paragraph'), 'patterson') ?></p>
+      <?php endif; ?>
+
     </div>
   </div>
 </div>
@@ -21,29 +26,32 @@ get_header();
   <div class="row">
     <h2 align="center"><?php _e('Friends Features', 'patterson') ?></h2>
     <div class="col-md-4">
-      <h3><a href="/get_involved/"><?php _e('Get Involved', 'patterson')?></a></h3>
-      <p><?php _e('The Friends of Patterson Park needs your help to keep Baltimores Best Backyard as a community oasis.  Volunteers and member donations help keep the Friends of Patterson Park going strong.  Get involved today!', 'patterson') ?></p>
-      <img src="/_img/treeTeam.jpg" alt="<?php _e('Tree Team', 'patterson')?>" class="img-responsive">
-      <p></p>
-      <p><a class="btn btn-primary btn-md" href="/get_involved/"><?php _e('Get Involved', 'patterson') ?> &raquo;</a></p>
+      <div class="se-front-page-feature-block-wrap">
+        <h3><a href="<?php the_field('1st_block_url'); ?>"><?php _e(get_field('1st_block_title'), 'patterson')?></a></h3>
+        <p><?php _e(get_field('1st_block_paragraph'), 'patterson') ?></p>
+        <img src="<?php echo get_field('1st_block_image')['url']; ?>" alt="<?php _e('Tree Team', 'patterson')?>" class="img-responsive">
+        <p><a class="btn btn-primary btn-md" href="<?php the_field('1st_block_url'); ?>">Go to <?php _e(get_field('1st_block_title'), 'patterson') ?> &raquo;</a></p>
+      </div>
     </div>
 
 
     <div class="col-md-4">
-      <h3><a href="/events/events_calendar.php"><?php _e('Events Calendar', 'patterson') ?></a></h3>
-      <p><?php _e('Learn more about the amazing events that happen in Patterson Park every day and our outreach partners who make these events happen.  Visit the Events Calendar to view upcoming Patterson Park events.', 'patterson') ?></p>
-      <img src="/_img/test2.jpg" alt="<?php _e('Kids Day', 'patterson')?>" class="img-responsive">
-      <p></p>
-      <p><a class="btn btn-primary btn-md" href="/events/events_calendar.php"><?php _e('View Events Calendar', 'patterson') ?> &raquo;</a></p>
+      <div class="se-front-page-feature-block-wrap">
+        <h3><a href="<?php the_field('2nd_block_url'); ?>"><?php _e(get_field('2nd_block_title'), 'patterson') ?></a></h3>
+        <p><?php _e(get_field('2nd_block_paragraph'), 'patterson') ?></p>
+        <img src="<?php echo get_field('2nd_block_image')['url']; ?>" alt="<?php _e('Kids Day', 'patterson')?>" class="img-responsive">
+        <p><a class="btn btn-primary btn-md" href="<?php the_field('2nd_block_url'); ?>">Go to <?php _e(get_field('2nd_block_title'), 'patterson') ?> &raquo;</a></p>
+      </div>
     </div>
 
 
     <div class="col-md-4">
-      <h3><a href="/park_places/park_map_and_resources.php"><?php _e('Park Map and Resources', 'patterson') ?></a></h3>
-      <p><?php _e('Patterson Park is home to a recreational center, ice skating rink, swimming pool, sport fields, and more.  To find out how to get to Patterson Park and what the park can offer you, go to our Park Map.') ?></p>
-      <img src="/_img/pool2.jpg" alt="<?php _e('Patterson Park Swimming Pool', 'patterson')?>" class="img-responsive">
-      <p></p>
-      <p><a class="btn btn-primary btn-md" href="/park_places/park_map_and_resources.php"><?php _e('Visit Park Map', 'patterson')?> &raquo;</a></p>
+      <div class="se-front-page-feature-block-wrap">
+        <h3><a href="<?php the_field('3rd_block_url'); ?>"><?php _e(get_field('3rd_block_title'), 'patterson') ?></a></h3>
+        <p><?php _e(get_field('3rd_block_paragraph')) ?></p>
+        <img src="<?php echo get_field('3rd_block_image')['url']; ?>" alt="<?php _e('Patterson Park Swimming Pool', 'patterson')?>" class="img-responsive">
+        <p><a class="btn btn-primary btn-md" href="<?php the_field('3rd_block_url'); ?>">Go to <?php _e(get_field('3rd_block_title'), 'patterson')?> &raquo;</a></p>
+      </div>
     </div>
   </div>
 </div>
