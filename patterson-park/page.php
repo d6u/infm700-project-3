@@ -20,13 +20,13 @@
 
         <?php if (get_field('call_to_action_paragraph')) : ?>
         <p class="se-page-header-call-to-action-paragraph">
-          <?php the_field('call_to_action_paragraph'); ?>
+          <?php _e(get_field('call_to_action_paragraph'), 'patterson'); ?>
         </p>
         <?php endif; ?>
 
         <?php if (get_field('call_to_action_button_text')) : ?>
         <div class="se-page-header-call-to-action-button">
-          <a href="<?php the_field('call_to_action_button_url'); ?>" class="btn btn-success btn-lg"><?php the_field('call_to_action_button_text'); ?></a>
+          <a href="<?php the_field('call_to_action_button_url'); ?>" class="btn btn-success btn-lg"><?php _e(get_field('call_to_action_button_text'), 'patterson'); ?></a>
         </div>
         <?php endif; ?>
 
