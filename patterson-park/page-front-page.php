@@ -7,14 +7,17 @@ get_header();
 
 
 <!-- Banner -->
-<div class="se-banner se-banner-homepage" style="background-image: url('<?php echo get_field('banner_image')['url']; ?>'); background-size: cover;">
+<div class="se-banner se-banner-homepage" style="background-image: url('<?php
+  echo get_field('banner_image')['url']; ?>'); background-size: cover;">
   <div class="se-banner-p-inner">
     <div class="se-banner-p-i-caption">
 
-      <h1 class="se-banner-p-i-c-title"><?php _e(get_field('banner_title'), 'patterson') ?></h1>
+      <h1 class="se-banner-p-i-c-title"><?php
+        _e(get_field('banner_title'), 'patterson') ?></h1>
 
       <?php if (get_field('banner_paragraph')) : ?>
-      <p class="se-banner-p-i-c-intro"><?php _e(get_field('banner_paragraph'), 'patterson') ?></p>
+      <p class="se-banner-p-i-c-intro"><?php
+        _e(get_field('banner_paragraph'), 'patterson') ?></p>
       <?php endif; ?>
 
     </div>
@@ -35,8 +38,8 @@ get_header();
           <div class="se-front-page-feature-block-wrap">
             <h3><a href="<?php the_field('1st_block_url'); ?>"><?php _e(get_field('1st_block_title'), 'patterson')?></a></h3>
             <p><?php _e(get_field('1st_block_paragraph'), 'patterson') ?></p>
-            <img src="<?php echo get_field('1st_block_image')['url']; ?>" alt="<?php _e('Tree Team', 'patterson')?>" class="img-responsive">
-            <p><a class="btn btn-primary btn-md" href="<?php the_field('1st_block_url'); ?>">Go to <?php _e(get_field('1st_block_title'), 'patterson') ?> &raquo;</a></p>
+            <img src="<?php echo get_field('1st_block_image')['url']; ?>" alt="<?php _e(get_field('1st_block_image')['alt'], 'patterson')?>" class="img-responsive">
+            <p><a class="btn btn-primary btn-md" href="<?php the_field('1st_block_url'); ?>"><?php _e('Go to '.get_field('1st_block_title'), 'patterson') ?> &raquo;</a></p>
           </div>
         </div>
 
@@ -44,8 +47,8 @@ get_header();
           <div class="se-front-page-feature-block-wrap">
             <h3><a href="<?php the_field('2nd_block_url'); ?>"><?php _e(get_field('2nd_block_title'), 'patterson') ?></a></h3>
             <p><?php _e(get_field('2nd_block_paragraph'), 'patterson') ?></p>
-            <img src="<?php echo get_field('2nd_block_image')['url']; ?>" alt="<?php _e('Kids Day', 'patterson')?>" class="img-responsive">
-            <p><a class="btn btn-primary btn-md" href="<?php the_field('2nd_block_url'); ?>">Go to <?php _e(get_field('2nd_block_title'), 'patterson') ?> &raquo;</a></p>
+            <img src="<?php echo get_field('2nd_block_image')['url']; ?>" alt="<?php _e(get_field('2nd_block_image')['alt'], 'patterson')?>" class="img-responsive">
+            <p><a class="btn btn-primary btn-md" href="<?php the_field('2nd_block_url'); ?>"><?php _e('Go to '.get_field('2nd_block_title'), 'patterson') ?> &raquo;</a></p>
           </div>
         </div>
 
@@ -56,18 +59,18 @@ get_header();
         <div class="col-md-6">
           <div class="se-front-page-feature-block-wrap">
             <h3><a href="<?php the_field('3rd_block_url'); ?>"><?php _e(get_field('3rd_block_title'), 'patterson') ?></a></h3>
-            <p><?php _e(get_field('3rd_block_paragraph')) ?></p>
-            <img src="<?php echo get_field('3rd_block_image')['url']; ?>" alt="<?php _e('Patterson Park Swimming Pool', 'patterson')?>" class="img-responsive">
-            <p><a class="btn btn-primary btn-md" href="<?php the_field('3rd_block_url'); ?>">Go to <?php _e(get_field('3rd_block_title'), 'patterson')?> &raquo;</a></p>
+            <p><?php _e(get_field('3rd_block_paragraph'), 'patterson') ?></p>
+            <img src="<?php echo get_field('3rd_block_image')['url']; ?>" alt="<?php _e(get_field('3rd_block_image')['alt'], 'patterson')?>" class="img-responsive">
+            <p><a class="btn btn-primary btn-md" href="<?php the_field('3rd_block_url'); ?>"><?php _e('Go to '.get_field('3rd_block_title'), 'patterson')?> &raquo;</a></p>
           </div>
         </div>
 
         <div class="col-md-6">
           <div class="se-front-page-feature-block-wrap">
             <h3><a href="<?php the_field('4th_block_url'); ?>"><?php _e(get_field('4th_block_title'), 'patterson') ?></a></h3>
-            <p><?php _e(get_field('4th_block_paragraph')) ?></p>
-            <img src="<?php echo get_field('4th_block_image')['url']; ?>" alt="<?php _e('Patterson Park Swimming Pool', 'patterson')?>" class="img-responsive">
-            <p><a class="btn btn-primary btn-md" href="<?php the_field('4th_block_url'); ?>">Go to <?php _e(get_field('4th_block_title'), 'patterson')?> &raquo;</a></p>
+            <p><?php _e(get_field('4th_block_paragraph'), 'patterson') ?></p>
+            <img src="<?php echo get_field('4th_block_image')['url']; ?>" alt="<?php _e(get_field('4th_block_image')['alt'], 'patterson')?>" class="img-responsive">
+            <p><a class="btn btn-primary btn-md" href="<?php the_field('4th_block_url'); ?>"><?php _e('Go to '.get_field('4th_block_title'), 'patterson')?> &raquo;</a></p>
           </div>
         </div>
 
