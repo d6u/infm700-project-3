@@ -83,3 +83,18 @@ function create_widget($name, $id, $description) {
 create_widget('Footer Left'  , 'footer_left'  , 'Display content in first column of footer.');
 create_widget('Footer Middle', 'footer_middle', 'Display content in middle column of footer.');
 create_widget('Footer Right' , 'footer_right' , 'Display content in last column of footer.');
+
+
+// Theme Option Page in Admin Side
+//
+// function wppatternson_park_menu() {
+//   add_options_page('Patterson Park Settings', 'Social Network', 'manage_options', 'wppatternson-park', 'wppatternson_park_page');
+// }
+// add_action('admin_menu', 'wppatternson_park_menu');
+
+// function wppatternson_park_page() {
+//   if (!current_user_can('manage_options')) {
+//     wp_die('You do not have sufficient permissions to access this page.');
+//   }
+//   echo '<p>Welcome to our plugin page!</p>';
+// }
