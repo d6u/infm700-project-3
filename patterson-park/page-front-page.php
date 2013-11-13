@@ -56,7 +56,7 @@ get_header();
     </div>
 
     <!-- Facebook -->
-    <div class="col-md-4">
+    <div class="col-md-4 hidden-xs">
       <div class="se-front-page-feature-block-wrap">
         <div class="fb-like-box" data-href="https://www.facebook.com/infm700teamyellow" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="true"></div>
       </div>
