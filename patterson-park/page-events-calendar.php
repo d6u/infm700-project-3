@@ -21,6 +21,8 @@ get_header();
       <!-- Header -->
       <header class="se-page-header">
 
+        <h1 class="se-page-header-title"><?php the_title(); ?></h1>
+
         <div class="se-page-header-calendar<?php if(!get_field('calendar_html_for_mobile')) echo ' no-mobile-version' ?>">
           <?php the_field('calendar_html'); ?>
         </div>
@@ -31,10 +33,7 @@ get_header();
         </div>
         <?php endif; ?>
 
-        <h1 class="se-page-header-title"><?php the_title(); ?></h1>
-
       </header>
-
 
       <!-- Content -->
       <?php get_template_part('content', 'page-body'); ?>
