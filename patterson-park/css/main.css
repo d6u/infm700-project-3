@@ -5425,9 +5425,20 @@ html, body {
   background-size: cover; }
 
 .se-front-page-feature-block-wrap {
-  padding: 15px; }
-  .se-front-page-feature-block-wrap img {
-    margin-bottom: 20px; }
+  margin: 15px; }
+  .se-front-page-feature-block-wrap h3 {
+    text-align: center; }
+  @media (min-width: 992px) {
+    .se-front-page-feature-block-wrap {
+      min-height: 420px; } }
+
+.se-front-page-feature-block-paragraph {
+  min-height: 120px; }
+
+.se-front-page-feature-block-image-container {
+  height: 200px;
+  background-size: cover;
+  margin-bottom: 20px; }
 
 .se-map-block {
   width: 100%;
