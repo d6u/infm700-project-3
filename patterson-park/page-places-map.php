@@ -18,7 +18,7 @@ get_header();
         <h1 class="se-page-header-title"><?php the_title(); ?></h1>
 
         <div class="se-page-map-wrap">
-          <iframe src="http://mapsengine.google.com/map/embed?mid=zwWst9VDdCx0.kmoCxTsXHzWM" height="480"></iframe>
+          <?php the_field('map_html'); ?>
         </div>
 
       </header>
