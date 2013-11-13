@@ -19,32 +19,24 @@
     <footer class="se-footer">
       <div class="se-footer-inner">
         <!-- Left -->
-        <div class="se-footer-i-contact-info">
-          <header class="se-footer-section-header"><?php _e('Contact Us', 'patterson')?></header>
-          <ul class="se-footer-section-list">
-            <li><span><?php _e('Phone: ', 'patterson') ?></span><span>410-276-3676</span></li>
-            <li><span><?php _e('Fax: ', 'patterson') ?></span><span>410-327-7592</span></li>
-            <li><span><?php _e('Email: ', 'patterson') ?></span><span>Friends@PattersonPark.com</span></li>
-          </ul>
+        <div class="se-footer-inner-column">
+          <?php if ( !dynamic_sidebar('footer_left') ) : ?>
+            <header class="se-footer-section-header"><?php _e('Add a widget to this area in the dashboard widget menu.', 'patterson') ?></header>
+          <?php endif; ?>
         </div>
 
         <!-- Middle -->
-        <div class="se-footer-i-subscribe">
-          <header class="se-footer-section-header"><?php _e('Subscribe to Email Newsletter', 'patterson') ?></header>
-          <input type="email" class="se-footer-section-input" placeholder="<?php _e('Email Address', 'patterson') ?>">
-          <button class="btn btn-success"><?php _e('Subscribe', 'patterson') ?></button>
-          <ul class="se-footer-social-networks">
-            <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/social-media-icons/facebook-icon.png" alt=""></a></li>
-            <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/social-media-icons/rss-icon.png" alt=""></a></li>
-            <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/social-media-icons/email-icon.png" alt=""></a></li>
-          </ul>
+        <div class="se-footer-inner-column">
+          <?php if ( !dynamic_sidebar('footer_middle') ) : ?>
+            <header class="se-footer-section-header"><?php _e('Add a widget to this area in the dashboard widget menu.', 'patterson') ?></header>
+          <?php endif; ?>
         </div>
 
         <!-- Right -->
-        <div class="se-footer-i-search">
-          <header class="se-footer-section-header"><?php _e('Search this Website', 'patterson')?></header>
-          <input type="text" class="se-footer-section-input" placeholder="<?php _e('Search Site', 'patterson') ?>">
-          <button class="btn btn-primary"><?php _e('Search', 'patterson')?></button>
+        <div class="se-footer-inner-column">
+          <?php if ( !dynamic_sidebar('footer_right') ) : ?>
+            <header class="se-footer-section-header"><?php _e('Add a widget to this area in the dashboard widget menu.', 'patterson') ?></header>
+          <?php endif; ?>
         </div>
 
       </div>

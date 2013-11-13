@@ -16,21 +16,29 @@ $smallWidth: 480px;
 
 
 // --- Level 1 ---
-.se-footer-i-contact-info {
+.se-footer-inner-column {
   @extend .col-md-4;
   margin-bottom: 20px;
-}
-
-.se-footer-i-subscribe {
-  @extend .se-footer-i-contact-info;
-}
-
-.se-footer-i-search {
-  @extend .se-footer-i-contact-info;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 
 // --- Components ---
+.se-footer-widget-wrap {
+  margin-bottom: 20px;
+
+  input[type="text"] {
+    @extend .form-control;
+    margin-bottom: 10px;
+  }
+
+  input[type="submit"] {
+    @extend .btn;
+    @extend .btn-default;
+  }
+}
+
 .se-footer-section-header {
   @extend .lead;
 }

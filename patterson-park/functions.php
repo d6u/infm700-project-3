@@ -66,11 +66,20 @@ function setup() {
 add_action( 'after_setup_theme', 'setup' );
 
 
-if ( function_exists('register_sidebar') ) {
+// Widgetize Footer
+//
+function create_widget($name, $id, $description) {
   register_sidebar(array(
-    'before_widget' => '',
-    'after_widget' => '',
-    'before_title' => '<h3>',
-    'after_title' => '</h3>',
+    'name'          => __($name, 'patterson'),
+    'id'            => $id,
+    'description'   => $description,
+    'before_widget' => '<div class="se-footer-widget-wrap">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<header class="se-footer-section-header">',
+    'after_title'   => '</header>'
   ));
 }
+
+create_widget('Footer Left'  , 'footer_left'  , 'Display content in first column of footer.');
+create_widget('Footer Middle', 'footer_middle', 'Display content in middle column of footer.');
+create_widget('Footer Right' , 'footer_right' , 'Display content in last column of footer.');
