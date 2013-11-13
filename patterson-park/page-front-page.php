@@ -2,6 +2,18 @@
 /*
 Template Name: Front Page
 */
+
+function echo_feature_block($rank) {
+  ?><div class="col-md-6">
+    <div class="se-front-page-feature-block-wrap">
+      <h3><a href="<?php the_field("{$rank}_block_url"); ?>"><?php _e(get_field("{$rank}_block_title"), 'patterson')?></a></h3>
+      <p class="se-front-page-feature-block-paragraph"><?php _e(get_field("{$rank}_block_paragraph"), 'patterson') ?></p>
+      <div class="se-front-page-feature-block-image-container" style="background-image: url('<?php echo get_field("{$rank}_block_image")['url']; ?>');"></div>
+      <p><a class="btn btn-primary btn-md" href="<?php the_field("{$rank}_block_url"); ?>"><?php _e('Go to '.get_field("{$rank}_block_title"), 'patterson') ?> &raquo;</a></p>
+    </div>
+  </div><?php
+}
+
 get_header();
 ?>
 
@@ -33,53 +45,21 @@ get_header();
     <div class="col-md-8">
 
       <div class="row">
-
-        <div class="col-md-6">
-          <div class="se-front-page-feature-block-wrap">
-            <h3><a href="<?php the_field('1st_block_url'); ?>"><?php _e(get_field('1st_block_title'), 'patterson')?></a></h3>
-            <p><?php _e(get_field('1st_block_paragraph'), 'patterson') ?></p>
-            <img src="<?php echo get_field('1st_block_image')['url']; ?>" alt="<?php _e(get_field('1st_block_image')['alt'], 'patterson')?>" class="img-responsive">
-            <p><a class="btn btn-primary btn-md" href="<?php the_field('1st_block_url'); ?>"><?php _e('Go to '.get_field('1st_block_title'), 'patterson') ?> &raquo;</a></p>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="se-front-page-feature-block-wrap">
-            <h3><a href="<?php the_field('2nd_block_url'); ?>"><?php _e(get_field('2nd_block_title'), 'patterson') ?></a></h3>
-            <p><?php _e(get_field('2nd_block_paragraph'), 'patterson') ?></p>
-            <img src="<?php echo get_field('2nd_block_image')['url']; ?>" alt="<?php _e(get_field('2nd_block_image')['alt'], 'patterson')?>" class="img-responsive">
-            <p><a class="btn btn-primary btn-md" href="<?php the_field('2nd_block_url'); ?>"><?php _e('Go to '.get_field('2nd_block_title'), 'patterson') ?> &raquo;</a></p>
-          </div>
-        </div>
-
+        <?php echo_feature_block('1st'); ?>
+        <?php echo_feature_block('2nd'); ?>
       </div>
 
       <div class="row">
-
-        <div class="col-md-6">
-          <div class="se-front-page-feature-block-wrap">
-            <h3><a href="<?php the_field('3rd_block_url'); ?>"><?php _e(get_field('3rd_block_title'), 'patterson') ?></a></h3>
-            <p><?php _e(get_field('3rd_block_paragraph'), 'patterson') ?></p>
-            <img src="<?php echo get_field('3rd_block_image')['url']; ?>" alt="<?php _e(get_field('3rd_block_image')['alt'], 'patterson')?>" class="img-responsive">
-            <p><a class="btn btn-primary btn-md" href="<?php the_field('3rd_block_url'); ?>"><?php _e('Go to '.get_field('3rd_block_title'), 'patterson')?> &raquo;</a></p>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="se-front-page-feature-block-wrap">
-            <h3><a href="<?php the_field('4th_block_url'); ?>"><?php _e(get_field('4th_block_title'), 'patterson') ?></a></h3>
-            <p><?php _e(get_field('4th_block_paragraph'), 'patterson') ?></p>
-            <img src="<?php echo get_field('4th_block_image')['url']; ?>" alt="<?php _e(get_field('4th_block_image')['alt'], 'patterson')?>" class="img-responsive">
-            <p><a class="btn btn-primary btn-md" href="<?php the_field('4th_block_url'); ?>"><?php _e('Go to '.get_field('4th_block_title'), 'patterson')?> &raquo;</a></p>
-          </div>
-        </div>
-
+        <?php echo_feature_block('3rd'); ?>
+        <?php echo_feature_block('4th'); ?>
       </div>
     </div>
 
     <!-- Facebook -->
     <div class="col-md-4">
-      <div class="fb-like-box" data-href="https://www.facebook.com/infm700teamyellow" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="true"></div>
+      <div class="se-front-page-feature-block-wrap">
+        <div class="fb-like-box" data-href="https://www.facebook.com/infm700teamyellow" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="true"></div>
+      </div>
     </div>
   </div>
 </div>

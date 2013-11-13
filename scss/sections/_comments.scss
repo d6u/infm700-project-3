@@ -1,0 +1,12 @@
+.se-comments-area {
+  textarea {
+    @extend .form-control;
+  }
+  input[type="submit"] {
+    @extend .btn;
+    @extend .btn-success;
+  }
+  code {
+    white-space: normal;
+  }
+}
