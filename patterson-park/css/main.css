@@ -5677,9 +5677,21 @@ html, body {
   .se-page-header-event-day {
     font-size: 88px; } }
 .se-page-header-calendar {
+  display: none;
   margin-top: 25px; }
   .se-page-header-calendar iframe {
     width: 100%; }
+  @media (min-width: 768px) {
+    .se-page-header-calendar {
+      display: block; } }
+  .se-page-header-calendar.no-mobile-version {
+    display: block; }
+
+.se-page-header-calendar-mobile iframe {
+  width: 100%; }
+@media (min-width: 768px) {
+  .se-page-header-calendar-mobile {
+    display: none; } }
 
 .se-donate-inner {
   padding-top: 30px;

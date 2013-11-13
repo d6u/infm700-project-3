@@ -136,6 +136,17 @@
 
 // Header for Events Calendar
 .se-page-header-calendar {
+  display: none;
   margin-top: 25px;
   iframe { width: 100%; }
+  @include respond-to(screen-sm) { display: block; }
+
+  &.no-mobile-version {
+    display: block;
+  }
+}
+
+.se-page-header-calendar-mobile {
+  iframe { width: 100%; }
+  @include respond-to(screen-sm) { display: none; }
 }

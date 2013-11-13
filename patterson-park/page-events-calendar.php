@@ -21,9 +21,15 @@ get_header();
       <!-- Header -->
       <header class="se-page-header">
 
-        <div class="se-page-header-calendar">
+        <div class="se-page-header-calendar<?php if(!get_field('calendar_html_for_mobile')) echo ' no-mobile-version' ?>">
           <?php the_field('calendar_html'); ?>
         </div>
+
+        <?php if(get_field('calendar_html_for_mobile')) : ?>
+        <div class="se-page-header-calendar-mobile">
+          <?php the_field('calendar_html_for_mobile'); ?>
+        </div>
+        <?php endif; ?>
 
         <h1 class="se-page-header-title"><?php the_title(); ?></h1>
 
