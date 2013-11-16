@@ -17,7 +17,7 @@ get_header();
 
         <h1 class="se-page-header-title"><?php the_title(); ?></h1>
 
-        <div class="se-page-map-wrap">
+        <div class="se-page-map-wrap hidden-xs">
           <?php the_field('map_html'); ?>
         </div>
 
