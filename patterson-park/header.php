@@ -42,12 +42,12 @@
           <a href="/" class="">Friends of Patterson Park</a>
         </div>
         <ul class="se-navbar-brand-social-links">
-          <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/social-media-icons/facebook-icon.png" alt=""></a></li>
+          <li><a href="<?php echo get_option('wp_patterson_facebook_url'); ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/social-media-icons/facebook-icon.png" alt=""></a></li>
           <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/social-media-icons/rss-icon.png" alt=""></a></li>
           <li class="se-navbar-brand-social-newsletter">
             <form action="">
-              <input type="email" placeholder="Subscribe to Newsletter" class="form-control input-sm">
-              <input type="submit" class="btn btn-success btn-sm">
+              <input type="email" placeholder="<?php _e('Subscribe to Newsletter', 'patterson'); ?>" class="form-control input-sm">
+              <input type="submit" class="btn btn-success btn-sm" valud="<?php _e('Subscribe', 'patterson'); ?>">
             </form>
           </li>
         </ul>

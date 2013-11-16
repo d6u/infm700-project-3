@@ -87,14 +87,39 @@ create_widget('Footer Right' , 'footer_right' , 'Display content in last column 
 
 // Theme Option Page in Admin Side
 //
-// function wppatternson_park_menu() {
-//   add_options_page('Patterson Park Settings', 'Social Network', 'manage_options', 'wppatternson-park', 'wppatternson_park_page');
-// }
-// add_action('admin_menu', 'wppatternson_park_menu');
+function wp_patternson_park_menu() {
+  add_menu_page(
+    'Patterson Theme Settings',
+    'Patterson',
+    'manage_options',
+    'patterson_settings',
+    'wp_patternson_park_page',
+    get_template_directory_uri().'/images/admin-menu-icon.png');
+}
+add_action('admin_menu', 'wp_patternson_park_menu');
 
-// function wppatternson_park_page() {
-//   if (!current_user_can('manage_options')) {
-//     wp_die('You do not have sufficient permissions to access this page.');
-//   }
-//   echo '<p>Welcome to our plugin page!</p>';
-// }
+
+function wp_patternson_park_page() {
+  if (!current_user_can('manage_options')) {
+    wp_die('You do not have sufficient permissions to access this page.');
+  }
+
+  // Store Value
+  if ( isset($_POST['wp_patterson_form_submitted']) ) {
+    $hidden_field = esc_html($_POST['wp_patterson_form_submitted']);
+    if ( $hidden_field == 'Y' ) {
+      $wp_patterson_address = esc_html($_POST['wp_patterson_address']);
+      update_option('wp_patterson_address', $wp_patterson_address);
+
+      $wp_patterson_facebook_url = esc_html($_POST['wp_patterson_facebook_url']);
+      update_option('wp_patterson_facebook_url', $wp_patterson_facebook_url);
+    }
+  }
+
+  // Get Option Value
+  $wp_patterson_address      = get_option('wp_patterson_address');
+  $wp_patterson_facebook_url = get_option('wp_patterson_facebook_url');
+
+
+  require('partials/admin_menu_page.php');
+}
