@@ -4,7 +4,15 @@ Template Name: Site Map
 */
 get_header();
 
-$site_map_pages = get_pages(array('sort_column' => 'menu_order'));
+$my_wp_query = new WP_Query(array(
+  'post_type'      => 'page',
+  'orderby'        => 'menu_order',
+  'order'          => 'ASC',
+  'posts_per_page' => -1
+));
+
+// $site_map_pages = get_pages(array('sort_column' => 'menu_order'));
+$site_map_pages = $my_wp_query->posts;
 
 function build_tree(Array $pages, $parent_id = 0) {
   $tree = array();
@@ -25,7 +33,7 @@ $pages_tree = build_tree($site_map_pages);
 function print_tree(Array $tree) {
   echo "<ul>";
   foreach ($tree as $branch) {
-    echo "<li><a href=".$branch->guid.">".$branch->post_title."</a>";
+    echo "<li><a href=".$branch->guid.">".__($branch->post_title, 'patterson')."</a>";
     if (isset($branch->post_children)) print_tree($branch->post_children);
     echo "</li>";
   }
