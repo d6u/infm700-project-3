@@ -47,7 +47,7 @@
           <li class="se-navbar-brand-social-newsletter">
             <form action="">
               <input type="email" placeholder="<?php _e('Subscribe to Newsletter', 'patterson'); ?>" class="form-control input-sm">
-              <input type="submit" class="btn btn-success btn-sm" valud="<?php _e('Subscribe', 'patterson'); ?>">
+              <input type="submit" class="btn btn-success btn-sm" value="<?php _e('Subscribe', 'patterson'); ?>">
             </form>
           </li>
         </ul>
