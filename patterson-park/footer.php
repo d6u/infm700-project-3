@@ -6,10 +6,9 @@
           <div class="se-map-block-d-inner">
             <header class="se-map-block-d-i-header"><?php _e('Find us at:', 'patterson') ?></header>
             <address class="se-map-block-d-i-address">
-              <?php _e('27 South Patterson Park Avenue', 'patterson') ?><br/>
-              <?php _e('Baltimore, MD 21231', 'patterson') ?>
+              <?php _e(str_replace("\n", "<br/>", get_option('wp_patterson_address')), 'patterson'); ?>
             </address>
-            <a href="https://www.google.com/maps/preview#!q=Patterson+Park%2C+Baltimore%2C+MD" class="se-map-block-d-i-get-direction"><?php _e('Get Directions from Google', 'patterson') ?></a>
+            <a href="https://www.google.com/maps?q=<?php echo get_option('wp_patterson_address'); ?>" class="se-map-block-d-i-get-direction"><?php _e('Get Directions from Google', 'patterson') ?></a>
           </div>
         </div>
       </div>
