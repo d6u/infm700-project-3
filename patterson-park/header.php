@@ -47,7 +47,7 @@
           <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/social-media-icons/rss-icon.png" alt=""></a></li>
           <li class="se-navbar-brand-social-newsletter">
             <form action="">
-              <input type="email" placeholder="<?php _e('Subscribe to Newsletter', 'patterson'); ?>" class="form-control input-sm">
+              <input type="email" placeholder="<?php _e('Email', 'patterson'); ?>" class="form-control input-sm">
               <input type="submit" class="btn btn-success btn-sm" value="<?php _e('Subscribe', 'patterson'); ?>">
             </form>
           </li>
