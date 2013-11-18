@@ -7,6 +7,7 @@
 // --- Base ---
 html, body {
   height: 100%;
+  background-color: $gray1;
 }
 
 
@@ -28,6 +29,13 @@ html, body {
       right: 90%;
     }
   }
+
+  @include respond-to(screen-md) {
+    &.pushed {
+      right: 0;
+      &.pushed-two-level { right: 0; }
+    }
+  }
 }
 
 
@@ -39,9 +47,13 @@ html, body {
 // --- Sections ---
 @import 'sections/navbar';
 @import 'sections/banner';
+@import 'sections/front-page';
 @import 'sections/content';
 @import 'sections/map-block';
 @import 'sections/footer';
 @import 'sections/calendar-jumbo';
 @import 'sections/page';
 @import 'sections/donate';
+@import 'sections/events-calendar';
+@import 'sections/post';
+@import 'sections/comments';

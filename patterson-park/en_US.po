@@ -1,0 +1,228 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Friends of Patterson Park v0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-11-11 01:12:48+0000\n"
+"Last-Translator: batman <scd5029@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:3
+#@ patterson
+msgid "Oops!  This page cannot be found."
+msgstr ""
+
+#: 404.php:5
+#@ patterson
+msgid "We are sorry.  The page that you are looking for cannot be found.  You can try again from the"
+msgstr ""
+
+#: 404.php:5
+#@ patterson
+msgid "Home Page"
+msgstr ""
+
+#: 404.php:5
+#@ patterson
+msgid "home page"
+msgstr ""
+
+#: 404.php:5
+#@ patterson
+msgid "or if you think something is wrong, please "
+msgstr ""
+
+#: 404.php:5
+#@ patterson
+msgid "Email the Friends of Patterson Park"
+msgstr ""
+
+#: 404.php:5
+#@ patterson
+msgid "contact us"
+msgstr ""
+
+#: content-page-body.php:6
+#@ twentythirteen
+msgid "Pages:"
+msgstr ""
+
+#: content-page-body.php:8
+#@ twentythirteen
+msgid "Edit"
+msgstr ""
+
+#: footer.php:7
+#@ patterson
+msgid "Find us at:"
+msgstr ""
+
+#: footer.php:9
+#@ patterson
+msgid "27 South Patterson Park Avenue"
+msgstr ""
+
+#: footer.php:10
+#@ patterson
+msgid "Baltimore, MD 21231"
+msgstr ""
+
+#: footer.php:12
+#@ patterson
+msgid "Get Directions from Google"
+msgstr ""
+
+#: footer.php:23
+#@ patterson
+msgid "Contact Us"
+msgstr ""
+
+#: footer.php:25
+#@ patterson
+msgid "Phone: "
+msgstr ""
+
+#: footer.php:26
+#@ patterson
+msgid "Fax: "
+msgstr ""
+
+#: footer.php:27
+#@ patterson
+msgid "Email: "
+msgstr ""
+
+#: footer.php:33
+#@ patterson
+msgid "Subscribe to Email Newsletter"
+msgstr ""
+
+#: footer.php:34
+#@ patterson
+msgid "Email Address"
+msgstr ""
+
+#: footer.php:35
+#@ patterson
+msgid "Subscribe"
+msgstr ""
+
+#: footer.php:45
+#@ patterson
+msgid "Search this Website"
+msgstr ""
+
+#: footer.php:46
+#@ patterson
+msgid "Search Site"
+msgstr ""
+
+#: footer.php:47
+#@ patterson
+msgid "Search"
+msgstr ""
+
+#: footer.php:54
+#@ patterson
+msgid "Copyright © 2013 Friends of Patterson Park. All Rights Reserved."
+msgstr ""
+
+#: front-page.php:7
+#@ patterson
+msgid "The Friends of Patterson Park"
+msgstr ""
+
+#: front-page.php:8
+#@ patterson
+msgid "The Friends of Patterson Park works to ensure the park’s vitality as a treasured green space and encourages use and appreciation by neighbors, visitors, and future generations."
+msgstr ""
+
+#: front-page.php:16
+#@ patterson
+msgid "Friends Features"
+msgstr ""
+
+#: front-page.php:18
+#: front-page.php:22
+#@ patterson
+msgid "Get Involved"
+msgstr ""
+
+#: front-page.php:19
+#@ patterson
+msgid "The Friends of Patterson Park needs your help to keep Baltimores Best Backyard as a community oasis.  Volunteers and member donations help keep the Friends of Patterson Park going strong.  Get involved today!"
+msgstr ""
+
+#: front-page.php:20
+#@ patterson
+msgid "Tree Team"
+msgstr ""
+
+#: front-page.php:27
+#@ patterson
+msgid "Events Calendar"
+msgstr ""
+
+#: front-page.php:28
+#@ patterson
+msgid "Learn more about the amazing events that happen in Patterson Park every day and our outreach partners who make these events happen.  Visit the Events Calendar to view upcoming Patterson Park events."
+msgstr ""
+
+#: front-page.php:29
+#@ patterson
+msgid "Kids Day"
+msgstr ""
+
+#: front-page.php:31
+#@ patterson
+msgid "View Events Calendar"
+msgstr ""
+
+#: front-page.php:36
+#@ patterson
+msgid "Park Map and Resources"
+msgstr ""
+
+#: front-page.php:37
+#@ default
+msgid "Patterson Park is home to a recreational center, ice skating rink, swimming pool, sport fields, and more.  To find out how to get to Patterson Park and what the park can offer you, go to our Park Map."
+msgstr ""
+
+#: front-page.php:38
+#@ patterson
+msgid "Patterson Park Swimming Pool"
+msgstr ""
+
+#: front-page.php:40
+#@ patterson
+msgid "Visit Park Map"
+msgstr ""
+
+#: functions.php:9
+#@ default
+msgid "Header Menu"
+msgstr ""
+
+#: functions.php:10
+#@ default
+msgid "Header Action Buttons"
+msgstr ""
+
+#: functions.php:21
+#@ patterson
+msgid "Back"
+msgstr ""
+

@@ -1,0 +1,20 @@
+.se-front-page-feature-block-wrap {
+  margin: 15px;
+  h3 {
+    text-align: center;
+  }
+
+  @include respond-to(screen-md) {
+    min-height: 420px;
+  }
+}
+
+.se-front-page-feature-block-paragraph {
+  min-height: 120px;
+}
+
+.se-front-page-feature-block-image-container {
+  height: 200px;
+  background-size: cover;
+  margin-bottom: 20px;
+}

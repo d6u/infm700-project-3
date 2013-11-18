@@ -87,9 +87,9 @@ $padding-small-horizontal:       10px !default;
 $line-height-large:              1.33 !default;
 $line-height-small:              1.5 !default;
 
-$border-radius-base:             4px !default;
-$border-radius-large:            6px !default;
-$border-radius-small:            3px !default;
+$border-radius-base:             0 !default;
+$border-radius-large:            0 !default;
+$border-radius-small:            0 !default;
 
 $component-active-color:         #fff !default;
 $component-active-bg:            $brand-primary !default;
@@ -245,7 +245,7 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 // Number of columns in the grid system
 $grid-columns:              12 !default;
 // Padding, to be divided by two and applied to the left and right of all columns
-$grid-gutter-width:         30px !default;
+$grid-gutter-width:         0 !default;
 // Point at which the navbar stops collapsing
 $grid-float-breakpoint:     $screen-sm-min !default;
 

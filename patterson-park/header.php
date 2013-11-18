@@ -6,34 +6,27 @@
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title><?php wp_title('|'); ?></title>
+  <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
   <meta name="description" content="<?php bloginfo( 'description' ); ?>">
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/main.css">
-  <link rel="stylesheet" href="<?= get_stylesheet_uri(); ?>">
-  <script src="<?= get_template_directory_uri(); ?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-  <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyA9TKtktEN4RfwW36zle63skJAlvjmqb5U&sensor=true"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
+  <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" />
   <?php wp_head(); ?>
-  <script>
-  $(function() {
-    $('#js-show-menu').on('click', function(event) {
-      $('.ly-inner-wrap').toggleClass('pushed');
-    });
-    $('.se-navbar-menus').on('click', 'a', function() {
-      if ($(this).next('ul.sub-menu').length) {
-        $(this).next('ul.sub-menu').toggleClass('selected');
-        $('.ly-inner-wrap').toggleClass('pushed-two-level');
-        return false;
-      }
-    })
-  });
-  </script>
 </head>
+
 <body>
+<?php // Facebook plugin code ?>
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=756034541088705";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
 
 
 <div class="ly-outer-wrap">
@@ -50,9 +43,14 @@
           <a href="/" class="">Friends of Patterson Park</a>
         </div>
         <ul class="se-navbar-brand-social-links">
-          <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/social-media-icons/facebook-icon.png" alt=""></a></li>
+          <li><a href="<?php echo get_option('wp_patterson_facebook_url'); ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/social-media-icons/facebook-icon.png" alt=""></a></li>
           <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/social-media-icons/rss-icon.png" alt=""></a></li>
-          <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/social-media-icons/email-icon.png" alt=""></a></li>
+          <li class="se-navbar-brand-social-newsletter">
+            <form action="">
+              <input type="email" placeholder="<?php _e('Subscribe to Newsletter', 'patterson'); ?>" class="form-control input-sm">
+              <input type="submit" class="btn btn-success btn-sm" value="<?php _e('Subscribe', 'patterson'); ?>">
+            </form>
+          </li>
         </ul>
       </div>
     </header>

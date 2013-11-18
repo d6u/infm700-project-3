@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
-<p>This is front-page.php</p>
+
+<p>This is a index.php</p>
+
 
 <?php get_footer();

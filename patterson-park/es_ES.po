@@ -1,0 +1,266 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Friends of Patterson Park v0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-11-11 15:37:35+0000\n"
+"Last-Translator: batman <scd5029@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:5
+#@ patterson
+msgid "We are sorry.  The page that you are looking for cannot be found.  You can try again from the"
+msgstr "Lo sentimos. La página que está buscando no se puede encontrar. Usted puede intentar otra vez desde el"
+
+#: 404.php:5
+#@ patterson
+msgid "Home Page"
+msgstr "Página de inicio"
+
+#: 404.php:5
+#@ patterson
+msgid "home page"
+msgstr "Página de inicio"
+
+#: 404.php:5
+#@ patterson
+msgid "or if you think something is wrong, please "
+msgstr "o si cree que algo está mal, por favor"
+
+#: 404.php:5
+#@ patterson
+msgid "Email the Friends of Patterson Park"
+msgstr "Enviar los Amigos del Parque Patterson"
+
+#: 404.php:5
+#@ patterson
+msgid "contact us"
+msgstr "contáctenos"
+
+#: content-page-body.php:6
+#: single.php:38
+#@ twentythirteen
+msgid "Pages:"
+msgstr ""
+
+#: content-page-body.php:8
+#: single.php:27
+#@ twentythirteen
+msgid "Edit"
+msgstr ""
+
+#: footer.php:7
+#@ patterson
+msgid "Find us at:"
+msgstr "Nos encontrará en:"
+
+#: footer.php:9
+#@ patterson
+msgid "27 South Patterson Park Avenue"
+msgstr "27 South Patterson Park Avenue"
+
+#: footer.php:10
+#@ patterson
+msgid "Baltimore, MD 21231"
+msgstr "Baltimore, MD 21231"
+
+#: footer.php:12
+#@ patterson
+msgid "Get Directions from Google"
+msgstr "Cómo llegar de Google"
+
+#: footer.php:23
+#@ patterson
+msgid "Contact Us"
+msgstr "Contáctenos"
+
+#: footer.php:25
+#@ patterson
+msgid "Phone: "
+msgstr "Teléfono:"
+
+#: footer.php:26
+#@ patterson
+msgid "Fax: "
+msgstr "Fax:"
+
+#: footer.php:27
+#@ patterson
+msgid "Email: "
+msgstr "Email: "
+
+#: footer.php:33
+#@ patterson
+msgid "Subscribe to Email Newsletter"
+msgstr "Suscribirse al boletín electrónico"
+
+#: footer.php:34
+#@ patterson
+msgid "Email Address"
+msgstr "Email"
+
+#: footer.php:35
+#@ patterson
+msgid "Subscribe"
+msgstr "Suscribir"
+
+#: footer.php:45
+#@ patterson
+msgid "Search this Website"
+msgstr "Buscar en este sitio web"
+
+#: footer.php:46
+#@ patterson
+msgid "Search Site"
+msgstr "Búsqueda en el sitio"
+
+#: footer.php:47
+#@ patterson
+msgid "Search"
+msgstr "Buscar"
+
+#: footer.php:54
+#@ patterson
+msgid "Copyright © 2013 Friends of Patterson Park. All Rights Reserved."
+msgstr "Copyright © 2013 Friends of Patterson Park. Todos los derechos reservados."
+
+#: front-page.php:7
+#@ patterson
+msgid "The Friends of Patterson Park"
+msgstr "Los Amigos del Parque Patterson"
+
+#: front-page.php:8
+#@ patterson
+msgid "The Friends of Patterson Park works to ensure the park’s vitality as a treasured green space and encourages use and appreciation by neighbors, visitors, and future generations."
+msgstr "Los Amigos del Parque Patterson trabaja para asegurar la vitalidad del parque como un espacio verde atesorado y alienta el uso y el aprecio por los vecinos, visitantes y las generaciones futuras."
+
+#: front-page.php:16
+#@ patterson
+msgid "Friends Features"
+msgstr "Características Amigos"
+
+#: front-page.php:23
+#: front-page.php:27
+#@ patterson
+msgid "Get Involved"
+msgstr "Involúcrate"
+
+#: front-page.php:24
+#@ patterson
+msgid "The Friends of Patterson Park needs your help to keep Baltimores Best Backyard as a community oasis.  Volunteers and member donations help keep the Friends of Patterson Park going strong.  Get involved today!"
+msgstr "Los Amigos del Parque Patterson necesita su ayuda para mantener Baltimores Mejor Backyard como un oasis comunidad. Voluntarios y donaciones miembros ayudan a mantener los Amigos del parque Patterson va fuerte. Participe hoy!"
+
+#: front-page.php:25
+#@ patterson
+msgid "Tree Team"
+msgstr "Equipo Tree"
+
+#: front-page.php:31
+#@ patterson
+msgid "Events Calendar"
+msgstr "Calendario de Eventos"
+
+#: front-page.php:32
+#@ patterson
+msgid "Learn more about the amazing events that happen in Patterson Park every day and our outreach partners who make these events happen.  Visit the Events Calendar to view upcoming Patterson Park events."
+msgstr "Aprenda más acerca de los sorprendentes acontecimientos que suceden en Patterson parque todos los días y nuestros socios de difusión que hacen que estos eventos sucedan. Visita el calendario de eventos para ver los próximos eventos del parque Patterson."
+
+#: front-page.php:33
+#@ patterson
+msgid "Kids Day"
+msgstr "Día de los Niños"
+
+#: front-page.php:35
+#@ patterson
+msgid "View Events Calendar"
+msgstr "Ver el Calendario de Eventos"
+
+#: front-page.php:44
+#@ patterson
+msgid "Park Map and Resources"
+msgstr "Mapa del Parque y Recursos"
+
+#: front-page.php:45
+#@ default
+msgid "Patterson Park is home to a recreational center, ice skating rink, swimming pool, sport fields, and more.  To find out how to get to Patterson Park and what the park can offer you, go to our Park Map."
+msgstr ""
+
+#: front-page.php:46
+#@ patterson
+msgid "Patterson Park Swimming Pool"
+msgstr "Patterson parque piscina"
+
+#: front-page.php:48
+#@ patterson
+msgid "Visit Park Map"
+msgstr "Visite el Parque Mapa"
+
+#: functions.php:9
+#@ default
+msgid "Header Menu"
+msgstr ""
+
+#: functions.php:10
+#@ default
+msgid "Header Action Buttons"
+msgstr ""
+
+#: functions.php:21
+#@ patterson
+msgid "Back"
+msgstr "De Vuelta"
+
+#: 404.php:3
+#@ patterson
+msgid "Oops!  This page cannot be found."
+msgstr "Oops!  Esta página no puede ser encontrado."
+
+#: front-page.php:52
+#: front-page.php:54
+#@ patterson
+msgid "Our Partners"
+msgstr "Nuestros Partners"
+
+#: front-page.php:53
+#@ patterson
+msgid "Learn more about the organizations - foundations, corporations, and community organizations - that breathe life into Patterson Park and the Friends of Patterson Park."
+msgstr "Aprenda más sobre las organizaciones - fundaciones, corporaciones y organizaciones comunitarias - que dan vida a Patterson Park y los Amigos de Patterson Park."
+
+#: front-page.php:55
+#@ patterson
+msgid "Visit Our Partners"
+msgstr "Visite nuestros asociados"
+
+#: single.php:37
+#@ twentythirteen
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: single.php:45
+#@ twentythirteen
+msgid "Leave a comment"
+msgstr ""
+
+#: single.php:45
+#@ twentythirteen
+msgid "One comment so far"
+msgstr ""
+
+#: single.php:45
+#@ twentythirteen
+msgid "View all % comments"
+msgstr ""
+

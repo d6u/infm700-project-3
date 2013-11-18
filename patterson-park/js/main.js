@@ -1,43 +1,75 @@
+// Avoid `console` errors in browsers that lack a console.
+//
+(function() {
+  var method;
+  var noop = function () {};
+  var methods = [
+    'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+    'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+    'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+    'timeStamp', 'trace', 'warn'
+  ];
+  var length = methods.length;
+  var console = (window.console = window.console || {});
+
+  while (length--) {
+    method = methods[length];
+
+    // Only stub undefined methods.
+    if (!console[method]) {
+        console[method] = noop;
+    }
+  }
+}());
+
+
+
 (function(window, $, undefined) {
 
-  // --- Navbar Mobile Menu ---
-  var screenSm;
-
-  // adjust navbar menu behavior based on window resize
-  function resizeCallback() {
-    screenSm = $(window).width() >= 992 ? false : true;
-    // clean css classes
-    $('#js-navbar').removeClass('se-navbar-expanded');
-    $('.se-navbar-top-menus-item').removeClass('se-navbar-top-menus-item-open');
-    $('#se-navbar-menus').removeClass('se-navbar-menus-dropdown-open');
-  };
-  resizeCallback();
-
-  var resizeTimer;
-  $(window).resize(function() {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(resizeCallback, 100);
-  });
-
-  // mobile navbar menu behavior
-  $('#js-navbar-toggle-menu').on('click', function() {
-    $('#js-navbar').toggleClass('se-navbar-expanded');
-    return false;
-  });
-
-  $('.js-navbar-menus-item').on('click', function() {
-    if (screenSm) {
-      $(this).parent().addClass('se-navbar-top-menus-item-open');
-      $('#se-navbar-menus').scrollTop(0)
-        .addClass('se-navbar-menus-dropdown-open');
-      return false;
+  // show/hide menu
+  $('#js-show-menu').on('click', function(event) {
+    $('.ly-inner-wrap').toggleClass('pushed');
+    if (!$('.ly-inner-wrap').hasClass('pushed')) {
+      $('.ly-inner-wrap').removeClass('pushed-two-level');
+      $('.se-navbar-menu-top .sub-menu').removeClass('selected');
     }
   });
 
-  $('.js-navbar-menus-item-back').on('click', function() {
-    $(this).parents('.se-navbar-top-menus-item')
-      .removeClass('se-navbar-top-menus-item-open');
-    $('#se-navbar-menus').removeClass('se-navbar-menus-dropdown-open');
+  // show sub menu
+  $('.se-navbar-menus').on('click', '.se-navbar-menu-top > li > a', function() {
+    if ($('.se-navbar-menus').height() != 88) {
+      // on mobile device
+      if (!$('.ly-inner-wrap').hasClass('pushed-two-level')) {
+        // no sub menu showed
+        if ($(this).next('ul.sub-menu').length) {
+          $(this).next('ul.sub-menu').addClass('selected');
+          $('.ly-inner-wrap').addClass('pushed-two-level');
+          return false;
+        }
+      } else {
+        // has sub menu showed
+        if ($(this).next('ul.sub-menu').length) {
+          // has sub menu element
+          if ($(this).next('ul.sub-menu').hasClass('selected')) {
+            // clicked current showed sub menu's parent
+            $(this).next('ul.sub-menu').removeClass('selected');
+            $('.ly-inner-wrap').removeClass('pushed-two-level');
+            return false;
+          } else {
+            // clicked other element
+            $('.se-navbar-menu-top .sub-menu').removeClass('selected');
+            $(this).next('ul.sub-menu').addClass('selected');
+            return false;
+          }
+        }
+      }
+    }
+  })
+
+  // hide sub menu
+  $('.se-navbar-menus').on('click', '.sub-menu-back-btn > a', function() {
+    $(this).parents('.sub-menu.selected').removeClass('selected');
+    $('.ly-inner-wrap').removeClass('pushed-two-level');
     return false;
   });
 
